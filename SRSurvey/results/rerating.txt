@@ -1,0 +1,13 @@
+intra-rater spearman correlations:
+	all: 0.753 n=90, dev=0.322
+	mturk: 0.706 n=31, dev=0.311
+	scholar: 0.777 n=52, dev=0.337
+mean absolute errors for general questions:
+	condition all: mae=0.237, n=114, dev=0.520
+	condition mturk: mae=0.238, n=42, dev=0.532
+	condition scholar: mae=0.224, n=67, dev=0.517
+mean absolute errors for specific questions:
+	condition all: mae=0.406, n=554, dev=0.610
+	condition mturk: mae=0.537, n=164, dev=0.738
+	condition scholar: mae=0.382, n=251, dev=0.570
+	condition scholar-in: mae=0.260, n=96, dev=0.441
