@@ -2,63 +2,45 @@ package srsurvey
 
 class Question {
 
-    int round
     int page    // which page of questions this will appear on
-    Double result
-    Double pmi
 
-    Date lastUpdated
+    Double result
+
     Integer questionNumber
-    Interest interest1
-    Interest interest2
-    Boolean interest1Known
-    Boolean interest2Known
-    String groupName    // name of the experimental ingroup
+    String location1
+    String location2
+    Boolean location1Known
+    Boolean location2Known
 
     static belongsTo = [survey:Survey]
 
     static constraints = {
         result nullable: true
         survey nullable: true
-        interest1Known nullable: true
-        interest2Known nullable: true
+        location1Known nullable: true
+        location2Known nullable: true
     }
 
-    Question(Double result, Integer questionNumber){
-        this.result = result
+    Question(Integer questionNumber, Integer page, String location1, String location2, Survey survey) {
         this.questionNumber = questionNumber
-    }
-
-    Question(Double result, Integer questionNumber, Interest interest1, Interest interest2){
-        this.result = result
-        this.questionNumber = questionNumber
-        this.interest1 = interest1
-        this.interest2 = interest2
-    }
-
-    Question(Integer questionNumber, Interest interest1, Interest interest2, Survey survey) {
-        this.questionNumber = questionNumber
-        this.interest1 = interest1
-        this.interest2 = interest2
+        this.page = page
+        this.location1 = location1
+        this.location2 = location2
         this.survey = survey
     }
 
-    public SrPair toSrPair() {
-        return new SrPair(phrase1: interest1.text, phrase2: interest2.text)
-    }
-
     public boolean hasAnswer() {
-        return result != null || interest1Known != null || interest2Known != null
+        return result != null || location1Known != null || location2Known != null
     }
 
     public void maybeSwap() {
         if (new Random().nextDouble() < 0.5) {
-            Interest iTmp = interest1
-            Boolean bTmp = interest1Known
-            interest1 = interest2
-            interest1Known = interest2Known
-            interest2 = iTmp
-            interest2Known = bTmp
+            String iTmp = location1
+            Boolean bTmp = location1Known
+            location1 = location2
+            location1Known = location2Known
+            location2 = iTmp
+            location2Known = bTmp
         }
     }
 }

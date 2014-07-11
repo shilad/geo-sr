@@ -14,21 +14,16 @@
     <r:require modules="core" />
     <r:script>
 
-    // from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
-    function validateEmail(email) {
-        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
-    }
     $(document).ready(function () {
                 $("#consent-text").scrollTop(1000);
                 $("#consent-text").animate({scrollTop : 0});
 
                 $("form").on("submit", function() {
-                    var email = $("#email").val();
-                    if (email && validateEmail(email)) {
+                    var workerId = $("#workerId").val();
+                    if (workerId) {
                         return true;
                     } else {
-                        alert('please enter a valid email');
+                        alert('please enter a valid Worker Id');
                         return false;
                     }
                 });
@@ -45,12 +40,12 @@
                 <div id="consent-text">
                     <h4>Overview</h4>
                     We invite you to participate in a research study that measures differences in how individuals perceive the strength of relationships between concepts.
-                    This study will advance scholarly knowledge in the field of computational linguistics and improve the algorithms powering the Macademia website.
+                    This study will advance scholarly knowledge in the field of computational linguistics and improve the algorithms computing semantic relatedness.
                     This study is open to all Internet users over 18.
 
                     <h4>What will my participation involve?</h4>
                     Your participation in the study will require approximately 15 minutes.
-                    If you decide to participate in this research you will be asked to rate the relatedness of a series of concept pairs (e.g. How related are "race car" and "engine?").
+                    If you decide to participate in this research you will be asked a series of broad questions about your geographical history and you will be asked to rate the relatedness of a series of concept pairs (e.g. How related are "Eiffel Tower" and "The Louvre?").
 
                     <h4>Principal Investigators:</h4>
                     Shilad Sen (<a href="mailto:ssen@macalester.edu">ssen@macalester.edu</a>)<br/>
@@ -85,12 +80,16 @@
                 <b>I am 18 or over and would like to participate.</b>
             </td>
             <td>
-                <label for="email">email:</label>
-                <input type="text" id="email" name="email" class="myInput" value="${person.email?.encodeAsHTML()}">
+                <label for="workerId">Worker ID:</label>
+                <input type="text" id="workerId" name="workerId" class="myInput" value="${person.workerId?.encodeAsHTML()}">
             </td>
             <td>
                 <label for="continue"></label><button id="continue" name="continue" class="myButton">Go!</button>
             </td>
+        </tr>
+        <tr class="bottom">
+            <td colspan="3">
+                (You must enter your Mechanical Turk Worker ID in order for us to pay you.)</td>
         </tr>
     </table>
 </g:form>

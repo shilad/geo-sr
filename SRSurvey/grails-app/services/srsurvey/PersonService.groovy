@@ -21,15 +21,4 @@ class PersonService {
         person.setEmail(email)
         person.save(flush: true)
     }
-
-    def addInterest(Person p, String text) {
-        def interest = Interest.findByText(text)
-        if (interest == null && !text.equals(""))
-        {
-            interest = new Interest(text)
-            interest.save(flush: true)
-        }
-        PersonToInterest pi = new PersonToInterest(p, interest)
-        pi.save(flush: true)
-    }
 }

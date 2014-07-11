@@ -2,22 +2,20 @@ package srsurvey
 
 class MturkService {
 
-    List<String[]> hits = []
+    List<String[]> codes = []
 
     public def init() {
-        Set<String> usedIds = new HashSet<String>(Person.findAllByMturkIdIsNotNull().mturkId)
-        for (String line : new File("dat/hits.txt")) {
-            String [] tokens = line.split()
-            String mturkId = tokens[0].trim()
-            String code = tokens[1].trim()
-            if (!usedIds.contains(mturkId)) {
-                hits.add([mturkId, code] as String[])
+        Set<String> usedCodes = new HashSet<String>(Person.findAllByCodeIsNotNull().code)
+        for (String line : new File("dat/codes.txt")) {
+            String code = line.trim()
+            if (!usedCodes.contains(code)) {
+                codes.add(code)
             }
         }
-        println("loaded ${hits.size()} remaining hits")
+        println("loaded ${codes.size()} remaining codes")
     }
 
-    public synchronized def makeIdAndCode() {
-        return hits.remove(0)
+    public synchronized def getCode() {
+        return codes.remove(0)
     }
 }

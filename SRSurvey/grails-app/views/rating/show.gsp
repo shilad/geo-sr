@@ -21,11 +21,11 @@
                     <table>
                         <tbody>
                         <tr class="first">
-                            <td class="interest">${q.interest1.text}</td>
+                            <td class="interest">${q.location1.text}</td>
                             <td class="checkbox">
                                 <input type="checkbox"
-                                       name="unknown_${q.id}_${q.interest1.id}"
-                                       class="checks" value="${q.interest1.id}"
+                                       name="unknown_${q.id}_${q.location1.id}"
+                                       class="checks" value="${q.location1.id}"
                                        <g:if test="${q.interest1Known == Boolean.FALSE}">checked</g:if> >
                             </td>
                             <td rowspan="2">
@@ -64,13 +64,13 @@
                             </td>
                         </tr>
                         <tr class="second">
-                            <td class="interest">${q.interest2.text}</td>
+                            <td class="interest">${q.location2.text}</td>
                             <td class="checkbox">
                                 <input type="checkbox"
-                                       name="unknown_${q.id}_${q.interest2.id}"
+                                       name="unknown_${q.id}_${q.location2.id}"
                                        class="checks"
-                                       id="${q.interest2.id}"
-                                       value="${q.interest2.id}"
+                                       id="${q.location2.id}"
+                                       value="${q.location2.id}"
                                        <g:if test="${q.interest2Known == Boolean.FALSE}">checked</g:if> >
                             </td>
                         </tr>

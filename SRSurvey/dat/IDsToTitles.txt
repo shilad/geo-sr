@@ -1,0 +1,774 @@
+3242995:Leavenheath
+11235:World Trade Center
+58024:EBay
+5463:Rocky Mountains
+1748:Copenhagen
+486472:Kansas City, Kansas
+1356:West Bengal
+22048:Odisha
+1186:Kerala
+27275:Central Asia
+47672:Terracotta Army
+4512:VfB Stuttgart
+25277:Hispaniola
+159868:Amel
+36004:Cocos (Keeling) Islands
+29198:2011 Egyptian revolution
+49108:Massachusetts Institute of Technology
+792:El Salvador
+56037:East Berlin
+123738:Hyde Park, London
+167394:Kragujevac
+117892:World Wide Fund for Nature
+34374:Crete
+41550:Organisation for Economic Co-operation and Development
+269:Tashkent
+33910:Uluru
+161227:Yalta Conference
+2038907:Battle of Wuhan
+1055:Hamburg
+16990:Mount Etna
+2634:Naples
+1402078:Warsaw Uprising
+638740:National Stock Exchange of India
+34366:Tasmania
+3769:French Guiana
+488278:Battle of Uhud
+170027:University of London
+971:Republic of the Congo
+29265:Canterbury Cathedral
+130958:The Great Sphinx
+80919:KGB
+8733:Qing Dynasty
+1222:Valle d'Aosta
+150928:Signal Iduna Park
+179684:Spanish Armada
+5859:Chichen Itza
+1265:Colorado River
+16641:American Samoa
+80344:Olympus
+1489:Mexico City
+970:Comoros
+657:Chad
+1049:Sudan
+730:Suriname
+54504:Sydney Harbour
+82613:Krakatoa
+5428:Siberia
+33959:Nice
+1521725:Louisiana State University and A&M College
+12563:Landes
+980:Bavaria
+34664:Hiroshima
+270:Warsaw
+749811:Mutiny on the Bounty
+42462:York
+188712:Empire of Japan
+29466:Kaaba
+151993:Ruhr Area
+1032:Niger
+11260:Broadway
+34675:Persian Gulf
+18869:Caucasus
+33132:Battle of Gettysburg
+10905515:Ryūkyū Islands
+2358411:Glenrowan, Victoria
+40194:Mazatlán
+122909:Crystal Palace
+18536:The Shard
+31063:Christmas Island
+131230:Mauna Kea
+215030:London Borough of Lewisham
+632794:Hawaiian–Emperor seamount chain
+10686:Belfast
+1207:North Dakota
+759:New Hampshire
+17070:Réunion
+31487:Kraków
+131969:Battle of Thermopylae
+31900:Battle of Marathon
+230899:University of Manchester
+179200:Metro-Goldwyn-Mayer
+12193:Brest, France
+188617:Kew Gardens
+1974:British Columbia
+1754:Stockholm
+899:Suez Canal
+1173:Burgundy
+683:Samoa
+161885:Kingdom of Great Britain
+1415:Indiana
+1445:Tamil Nadu
+231:Wallonia
+17269:Tibet
+161491:Reading, Berkshire
+131297:Rwandan Genocide
+14112:Corsica
+174710:University of California, Los Angeles
+131397:Venus of Willendorf
+41931:Hanging Gardens of Babylon
+131354:Alcatraz Island
+12772:Tarn
+174:São Paulo
+37320:Cleveland, Ohio
+194057:Mount Rainier
+43332:Pompeii
+3616:Tehran
+16556:Phoenix, Arizona
+945:Togo
+879:Bromine
+60140:Indian subcontinent
+23334:Abkhazia
+483551:Walmart
+1737:Bregenz
+164679:Great Fire of London
+99309:Pantheon
+16338015:Sewol
+985210:Victoria Station
+1829:Kaliningrad
+784:Dominica
+9679:Isle of Wight
+1393:Delaware
+524757:KFC
+2090:Nuremberg
+7880:Toulouse
+3304442:Mission San Luis Obispo de Tolosa
+79996:Nome, Alaska
+173882:St. Paul's Cathedral
+209184:Israel Academy of Sciences and Humanities
+2044:Florence
+967:Burundi
+1952:Nova Scotia
+727:Amsterdam
+977:Djibouti
+510:Mariana Trench
+1887338:White Lodge, Richmond Park
+168756:University of California, Berkeley
+956:Beijing
+1202:Saxony
+954:Zimbabwe
+205495:Gas station
+1211:South Dakota
+6346:Indianapolis
+188304:Sunderland
+125821:George Washington Bridge
+15786:1. FC Nuremberg
+180182:Battle of Iwo Jima
+18094:Honolulu
+172613:Teotihuacán
+114295:Fukushima Daiichi Nuclear Power Plant
+1471:Seine
+1212:Montana
+1494:Mississippi
+187334:Al Anbar Province
+1792:Gdańsk
+8691:London Heathrow Airport
+774:Guatemala
+29364:Montgomery, Alabama
+1014:Liberia
+164983:Gallipoli Campaign
+874:Turkmenistan
+37362:Akrotiri and Dhekelia
+18221:Turks and Caicos Islands
+4361:Curitiba
+7795:Organization of the Petroleum Exporting Countries
+2004262:USS Arizona Memorial
+44687:Schutzstaffel
+626:Volga River
+3183:Perth, Western Australia
+5813:Canary Islands
+34713:Salzburg
+1865480:Bastille
+11943:Zürich (canton)
+975:San Antonio
+2751:Sienna
+81307:Greenpeace
+93332:Appalachian Mountains
+52062:Nordic countries
+28179:Joseon
+174335:French Civil Aviation University
+151480:Sphinx
+2814:Halle, Saxony-Anhalt
+1020:Malawi
+1273:Tuscany
+192557:DreamWorks
+37200:Great Pyramid of Giza
+25263:Azores
+1983493:Western Victorian Volcanic Plains
+7835:Crimea
+129143:Trafalgar Square
+1780:Bratislava
+1505:Sikkim
+724:Maine
+1546:Iowa
+1025:Mauritania
+638904:Great Pacific Garbage Patch
+1930:Ottawa
+31945:Arabian Peninsula
+22889:Bath, Somerset
+871991:Cherry blossom
+914:Volgograd
+1387:Rhode Island
+123577:U.S. Open (tennis)
+1000:Gabon
+35958:Bosporus
+43196:Cincinnati
+819:Laos
+127552:Pixar
+824:Oregon
+1603:Kentucky
+1371:West Virginia
+321437:Bodhi Tree
+574:East Timor
+102720:Hertha BSC
+11767:Mesopotamia
+71719:Hollywood Walk of Fame
+39061:Northern hemisphere
+1612:Arkansas
+1227:Nevada
+1037:Rwanda
+1342:Pittsburgh
+101959:Borussia Mönchengladbach
+8577:2012 Summer Olympics
+804:Panama
+1171:Goa
+5690:Sparta
+917:Bhutan
+833850:Carnac stones
+265:Uzbekistan
+124425:Iron Curtain
+62408:Palace of Westminster
+1865:Kuala Lumpur
+1799:Wrocław
+1050:Swaziland
+1581:Missouri
+49658:Loch Ness Monster
+272434:Globe Theatre
+3757:Java
+23337:Salt Lake City
+717:Venezuela
+754:Trinidad and Tobago
+159599:CeBIT
+71:Geneva
+128910:The Last Supper
+164256:Kansai region
+1553:Nebraska
+9648:Falkland Islands
+85:Cairo
+986:Eritrea
+35525:White House
+783:Honduras
+217:Moldova
+1197:Lower Saxony
+1527:Minnesota
+1537:Wisconsin
+1183:Puerto Rico
+4628:Faroe Islands
+26253:Madeira Islands
+223644:Solomon's Temple
+58733:Confederación Sudamericana de Fútbol
+12837:Iberian Peninsula
+170495:Topkapı Palace
+1726:Munich
+3114:Canberra
+686:Vanuatu
+1286:Alps
+1036:Uganda
+1361:Hyderabad, India
+916:Angola
+933:South Pole
+1741:Vienna
+37093:Yahoo!
+72:Zürich
+3542:Niger River
+1456:South Carolina
+9676:Isle of Man
+23430:Ulan Bator
+999109:Port Arthur, Tasmania
+1529151:Glamis Castle
+6583:Sahara
+37230:Central Intelligence Agency
+382118:Parliament of Australia
+842:Oman
+253414:FIFA
+236:Montenegro
+181013:Little Boy
+11929:Solothurn (canton)
+48159:City of Manchester Stadium
+275662:Mount Hood
+24639:Vancouver
+5456:Andes
+1027:Mauritius
+11708:Southeast Asia
+7178:International Red Cross and Red Crescent Movement
+40605:Large Hadron Collider
+1497:Mississippi River
+173034:Battle of Midway
+44440:Golden Gate Bridge
+712:Fiji
+962:Benin
+23883:Dead Sea
+637413:United States Census Bureau
+1761:Dublin
+228:Andorra
+1348:Kolkata
+734:Guyana
+1391:Maryland
+953:Zambia
+6106:Portland, Oregon
+36380:Society of Jesus
+1524:Athens
+52418:Attack on Pearl Harbor
+5051616:Catbells
+180788:National Gallery, London
+176:Quebec
+1492:Barcelona
+817:Kuwait
+23522:Balkans
+965:Burkina Faso
+826:Maldives
+9337:Flemish Region
+36091:Minneapolis
+48249:Falklands War
+8889:European Parliament
+104770:1. FC Cologne
+12061013:Kingsway tramway subway
+1180:Jammu and Kashmir
+38095:Galápagos Islands
+40970:International Olympic Committee
+131389:International Date Line
+1156:Mumbai
+1588:Louisiana
+779:Connecticut
+115:Ethiopia
+1522:New Mexico
+48314:Battle of Waterloo
+785:Jersey
+81591:Great Rift Valley
+838278:2009 Victorian bushfires
+138518:Princeton, New Jersey
+1757:Helsinki
+34221:Niagara Falls
+23635:Bermuda
+16557:Dallas
+32494:FC Schalke 04
+193484:Assassination of John F. Kennedy
+172030:McLaren
+4093:Glasgow
+36704:Yugoslavia
+11201:Supreme Court of the United States
+221:Republic of Macedonia
+180402:Yosemite National Park
+41179:Mekong River
+229:Republic of Cyprus
+1509:Tennessee
+45178:Sydney Opera House
+466:World Wide Web
+750:Bolivia
+863:Tajikistan
+1044:Sierra Leone
+200697:Gilgit-Baltistan
+1166:Michigan
+3141:Melbourne
+1085:Prague
+41520:The Championships, Wimbledon
+624556:St. Patrick's Cathedral (New York)
+23197:Nashville, Tennessee
+23482:Marseille
+1231:Kosovo
+340:Montreal
+456:Lyon
+1204:Illinois
+16552:San Diego, California
+82425:Brandenburg Gate
+850231:Leschelle
+757979:Assassination attempt on Ronald Reagan
+77:Uruguay
+1558:Kansas
+326134:Leuze
+205976:Mount of Olives
+39671:Stonehenge
+238:San Marino
+1261:Colorado
+878:United Arab Emirates
+15878:Normandy
+40171:Neanderthal
+172:Toronto
+32:Luxembourg
+18419:Brooklyn
+1397:Ohio
+1410:Gibraltar
+1042:Seychelles
+1011:Cape Verde
+7156:F.C. Barcelona
+35672:Pitcairn
+200130:Azad Kashmir
+2256:Birmingham
+829:Utah
+496360:Idaho Falls
+13989:Honshū
+1400:Pennsylvania
+771:Massachusetts
+1045:Somalia
+1009:Cameroon
+16554:Denver
+41304:Weimar Republic
+974:Democratic Republic of the Congo
+38789:Battle of Stalingrad
+12514:Three Gorges Dam
+152033:2008 Sichuan earthquake
+12508:Giza pyramid complex
+19686:River Thames
+130754:2004 Indian Ocean earthquake
+1214:Wyoming
+664609:Caribbean
+1408:New Jersey
+1454:North Carolina
+35637:Nobel Peace Prize
+3224:New South Wales
+35794:University of Cambridge
+347:Liechtenstein
+822:Lebanon
+171178:Fukushima nuclear disaster
+29294:Willis Tower
+1019:Madagascar
+1030:Namibia
+7350:Panama Canal
+38076:McDonald's
+42646:Windsor Castle
+200667:Ladakh
+5484:Caspian Sea
+2153814:Haines City
+13706:Sealand
+406:Istanbul
+924:Tanzania
+13991:Shikoku
+161562:California Institute of Technology
+963:Botswana
+43708:Bermuda triangle
+329266:Crater Lake
+6373:British Museum
+23792:Palestine
+34404:New Orleans
+912:Mali
+5272356:Erwarton
+790:Haiti
+644636:Cyprus
+1370:Virginia
+1123997:Waldorf-Astoria Hotel
+649:Moscow
+11972:Aargau
+641:Venice
+5092:Baltimore
+34370:Rotterdam
+37836:Milwaukee
+49762:Christian Democratic Union of Germany
+215:Slovenia
+14773:Macau
+192088:Eton College
+1519761:United States Department of Health, Education, and Welfare
+1794:Frankfurt
+19024:Boston Tea Party
+70:Bern
+23548:NASA
+23436:Edinburgh
+181185:Disneyland
+524:Mount Vesuvius
+330872:Badshahi Mosque
+5725:Mohenjo-daro
+191:Estonia
+12724:Ticino
+184:Belarus
+4478:Punjab (Pakistan)
+1039:São Tomé and Príncipe
+813:Kyrgyzstan
+1747689:Ancient Rome
+172691:Thar Desert
+3392:Nile
+2981:Notre Dame de Paris
+28513:Austria-Hungary
+39231:Mount Fuji
+26:Northern Ireland
+398:Bahrain
+13371:Harvard University
+38022:St. Louis
+1693:North Sea
+34433:University of Oxford
+482459:Summerhill School
+419:Peru
+10690:Cardiff
+810:Jordan
+36687:Victoria (Australia)
+160409:Central Park
+7164:World Bank
+786:Dominican Republic
+172851:Spa-Francorchamps
+7825:World Trade Organization
+164815:Woodstock Festival
+1008:Côte d'Ivoire
+11703:United States Virgin Islands
+11701:United States House of Representatives
+16555:Houston
+351:Yellowstone National Park
+13987:Kyūshū
+5806:Mecca
+211:Latvia
+816:Arizona
+837:Nepal
+223:Greenland
+1428:Georgia (U.S. state)
+43777:2010 Haiti earthquake
+8678:Rio de Janeiro
+12439:Detroit
+17155:Barcelona Cathedral
+241:Cuba
+2807:Madrid
+227:Azerbaijan
+11268:United States Congress
+424:Cambodia
+7809:UNESCO
+208855:Jallianwala Bagh massacre
+8646:Hong Kong
+98:Pacific Ocean
+214:Slovakia
+233:Malta
+65250:39th G8 summit
+736:Ecuador
+805:Yemen
+83497:Mount Rushmore
+865:Republic of China
+37:Lithuania
+9188:Empire State Building
+126399:Warner Bros.
+118841:Grand Canyon
+230:Georgia (country)
+225:Bosnia and Herzegovina
+7804:International Monetary Fund
+18:South America
+1320376:York Cottage
+711:Mongolia
+921:Brunei
+399:Armenia
+11010:Parliament of the United Kingdom
+18097:Korea
+16635:Guam
+881:Vietnam
+180:Wikimedia Foundation
+1016:Libya
+43100:Kashmir
+121233:Boyacá
+796:Iraq
+212065:Edinburgh Castle
+41187:Sony
+24826:Liverpool
+1005:The Gambia
+118388:Death Valley
+2430320:San Juan de la Maguana
+173:Alabama
+117:Ghana
+20:Norway
+213:Czech Republic
+1029:Mozambique
+1345:Philadelphia
+771405:South Asia
+24120:Dunière-sur-Eyrieux
+36204:2011 Tōhoku earthquake and tsunami
+15789:FC Bayern Munich
+846:Qatar
+114:Kenya
+224:Croatia
+1439:Texas
+262:Algeria
+18125:Manchester
+25173:RMS Titanic
+935116:Sandringham House
+377156:Rocher
+222:Albania
+22890:Ireland
+23556:Atlanta
+1490:Tokyo
+1028:Morocco
+656:Saint Petersburg
+189:Iceland
+232:Kazakhstan
+800:Costa Rica
+1649:Oklahoma
+7341:Auschwitz concentration camp
+423:North Korea
+169966:Deccan Plateau
+66096:United States Senate
+49042:Southern United States
+23681:Northern Cyprus
+1902016:Marlborough College
+833:Malaysia
+869:Thailand
+3130:Sydney
+79:Egypt
+25:Wales
+837833:2010–2011 Queensland floods
+11299:Manhattan
+12544:Byzantine Empire
+35581:Hokkaidō
+243028:Giron
+83224:Battle of Hastings
+151030:Moulin Rouge
+1033:Nigeria
+782:Hawaii
+219:Bulgaria
+47131:Ku Klux Klan
+858:Syria
+41403:Teletubbies
+220:Rome
+126982:Sea of Galilee
+486:Chernobyl disaster
+7318:Nazi Germany
+7343:Great Barrier Reef
+19675:Musée du Louvre
+121378:Corfu
+252:Indonesia
+28:Hungary
+34863:Oklahoma City
+160659:London Eye
+10285:Colosseum
+298:Chile
+27:Republic of Ireland
+1771696:Charminar
+31:Belgium
+948:Tunisia
+4918:Mediterranean Sea
+1384:New York
+97:Atlantic Ocean
+7348:Indus River
+34006:Hollywood
+34:Sweden
+132568:Battle of the Somme
+7801:International Court of Justice
+33:Finland
+902:Bangladesh
+797:Alaska
+5083:Seattle
+828:Americas
+22502:Taiwan
+129029:Bhopal disaster
+49:North America
+62:San Francisco
+45:Portugal
+884:South Korea
+64:Berlin
+739:Colombia
+928:Philippines
+3783:Amazon River
+5086:Berlin Wall
+414:Argentina
+100:Boston
+12512:St. Peter's Basilica
+148:People's Republic of China
+1218:Jerusalem
+237:Vatican City
+51:Antarctica
+812:Florida
+1297:Chicago
+23768:Las Vegas
+212:Ukraine
+854:Sri Lanka
+4675:Mount St. Helens
+8652:Miami
+40:Austria
+99:California
+334:Singapore
+1223:Washington (state)
+36:Poland
+218:Romania
+203233:Battle of Plassey
+851:Saudi Arabia
+5933:Westminster Abbey
+99717:Tiananmen Square protests of 1989
+889:Afghanistan
+23220:Berkshire
+12495:Burj Khalifa
+83125:Tower Bridge
+7184:NATO
+9202:Statue of Liberty
+258:South Africa
+177567:Amazon rainforest
+322:Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch
+212372:Boko Haram
+1013:Lesotho
+16471:Battle of Normandy
+7785:Commonwealth of Nations
+48435:Sagrada Família
+10806:September 11 attacks
+584:Rhine River
+96:Mexico
+366545:Mathieu
+858651:Carville
+5089:Ganges
+996113:Ifs
+23666:Great Britain
+13950:Picardy
+12501:Great Wall of China
+193306:Falaise
+685:Solomon Islands
+16954:Lower Normandy
+672:Tuvalu
+43:Turkey
+1239:Indian Ocean
+843:Pakistan
+769:Grenada
+243:Eiffel Tower
+155:Brazil
+691:Papua New Guinea
+760:Saint Lucia
+95:Google
+676203:Machu Picchu
+757:Saint Vincent and the Grenadines
+29:Spain
+17:Japan
+794:Iran
+781:Antigua and Barbuda
+29520:China
+763:Saint Kitts and Nevis
+2763:The Holocaust
+836:Myanmar
+22:Scotland
+235:Monaco
+766:Jamaica
+513:Mount Everest
+5451:Himalayas
+38:Italy
+15727208:Asia Minor
+42182:Buckingham Palace
+62378:Tower of London
+55:Netherlands
+41225:Big Ben
+39:Switzerland
+90:Paris
+778:The Bahamas
+91413:San Gimignano
+664:New Zealand
+159:Russia
+21:England
+1065:United Nations
+174825:History of Australia
+35572:Union of European Football Associations
+65:Los Angeles
+60:New York City
+41:Greece
+35:Denmark
+39054:Leaning Tower of Pisa
+156616:INSEE
+3249:Calvados
+183:Germany
+215138:Monte Fitz Roy
+61:Washington, D.C.
+9141:Taj Mahal
+16:Canada
+84:London
+408:Australia
+668:India
+145:United Kingdom
+25322:Arctic
+30:United States
+7204:Middle East
+11694:American Airlines Flight 11
+9678:2014 Winter Olympics

@@ -10,7 +10,7 @@ class RatingController {
 
     def show(){
         Person p = personService.getForSession(session)
-        if (!p.hasConsented || p.group == null) {
+        if (!p.hasConsented || !p.education) {
             redirect(url : '/')
             return
         }
@@ -26,14 +26,10 @@ class RatingController {
             def tokens = [
                     'showRating',
                     q.id,
-                    q.round,
                     q.page,
                     q.questionNumber,
-                    q.groupName,
-                    q.interest1.text,
-                    q.interest2.text,
-                    q.pmi,
-
+                    q.location1,
+                    q.location2,
             ]
             loggingService.append(p, request, tokens.collect({it.toString()}).join('\t'))
         }
@@ -115,9 +111,9 @@ class RatingController {
                 int qid = tokens[1] as int
                 int iid = tokens[2] as int
                 Question question = Question.get(qid)
-                if (iid == question.interest1.id) {
+                if (iid == question.location1.id) {
                     question.interest1Known = false
-                } else if (iid == question.interest2.id) {
+                } else if (iid == question.location2.id) {
                     question.interest2Known = false
                 } else {
                     throw new IllegalArgumentException("question " + qid + " has no id " + iid)

@@ -7,14 +7,20 @@ class LoggingService {
     private static File output = new File("./phrasepairs-log.txt")
 
     def append(Person p, HttpServletRequest request, String message) {
+        appendMany(p, request, [message])
+    }
+
+    def appendMany(Person p, HttpServletRequest request, List<String> messages) {
         String id = (p.id) ? p.id : "unknown"
-        String email = (p.email) ? p.email : "unknown"
+        String workerId = (p.workerId) ? p.workerId : "unknown"
         String ip = getIpAddress(request)
         String tstamp = new Date().format("yyyy-MM-dd hh:mm:ss")
-        message = message.replace("\n", " ")
 
         synchronized (output) {
-            output.append("$tstamp\t$ip\t$id\t$email\t$message\n")
+            for (String message : messages) {
+                message = message.replace("\n", " ")
+                output.append("$tstamp\t$ip\t$id\t$workerId\t$message\n")
+            }
         }
     }
 
