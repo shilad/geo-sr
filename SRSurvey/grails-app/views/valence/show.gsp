@@ -3,12 +3,12 @@
 <head>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
-    <title>Macademia survey: Location interest, page ${page + 1} of 4</title>
+    <title>Macademia survey: Location interest, page ${page + 11} of 15</title>
 
 </head>
 <body>
 <div class="rounded-corners rating" id="main-container">
-    <br/><h1>Macademia survey: Rate location(page ${page + 1} of 4)</h1>
+    <br/><h1>Macademia survey: Rate location(page ${page + 11} of 15)</h1>
     <div id="instructions">
         Please rate your agreement with the following statement:<br/><br/>
 

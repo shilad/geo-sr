@@ -3,12 +3,12 @@
 <head>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
-    <title>Macademia survey: Concept relatedness, page ${page + 1} of 4</title>
+    <title>Macademia survey: Concept relatedness, page ${page + 3} of 15</title>
 
 </head>
 <body>
 <div class="rounded-corners rating" id="main-container">
-    <br/><h1>Macademia survey: Rate concept relatedness (page ${page + 1} of 4)</h1>
+    <br/><h1>Macademia survey: Rate concept relatedness (page ${page + 3} of 15)</h1>
     <div id="instructions">
         Please rate how related each pair of concepts is.
         When you finish rating all pairs, click "next".<br/><br/>

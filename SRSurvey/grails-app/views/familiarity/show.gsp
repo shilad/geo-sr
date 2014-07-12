@@ -3,12 +3,12 @@
 <head>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
-    <title>Macademia survey: Location familiarity, page ${page + 1} of 4</title>
+    <title>Macademia survey: Location familiarity, page ${page + 7} of 15</title>
 
 </head>
 <body>
 <div class="rounded-corners rating" id="main-container">
-    <br/><h1>Macademia survey: Rate location familiarity (page ${page + 1} of 4)</h1>
+    <br/><h1>Macademia survey: Rate location familiarity (page ${page + 7} of 15)</h1>
     <div id="instructions">
         Please rate how familiar you are with each of the following locations.
     </div>
