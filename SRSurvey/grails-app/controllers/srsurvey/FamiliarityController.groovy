@@ -78,7 +78,7 @@ class FamiliarityController {
         }
 
         int page = params.page as int
-        List<Question> toAsk = p.survey.familiarity.findAll({it.page == page })
+        List<LocationFamiliarity> toAsk = p.survey.familiarity.findAll({it.page == page })
         if (toAsk.isEmpty()) throw new IllegalStateException()
 
         for (qparam in params){

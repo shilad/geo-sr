@@ -95,8 +95,8 @@ class ValenceController {
         for (LocationValence l : toAsk) {
             l.save()
         }
-
-        if (page == 3) {
+        int maxPage = p.survey.valence*.page.max()
+        if (page == maxPage) {
             redirect(controller: 'finish', action: 'show')
         } else {
             redirect(action: 'show', params: [page: page+1])
