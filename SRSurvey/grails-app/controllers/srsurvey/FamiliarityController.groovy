@@ -96,7 +96,8 @@ class FamiliarityController {
             l.save()
         }
 
-        if (page == 3) {
+        int maxPage = p.survey.familiarity*.page.max()
+        if (page == maxPage) {
             redirect(controller: 'valence', action: 'show')
         } else {
             redirect(action: 'show', params: [page: page+1])
