@@ -3,34 +3,25 @@
 <head>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
-    <title>Macademia survey: Concept relatedness, page ${page + 1} of 4</title>
+    <title>Macademia survey: Location familiarity, page ${page + 1} of 4</title>
 
 </head>
 <body>
 <div class="rounded-corners rating" id="main-container">
     <br/><h1>Macademia survey: Rate concept relatedness (page ${page + 1} of 4)</h1>
     <div id="instructions">
-        Please rate how related each pair of concepts is.
-        When you finish rating all pairs, click "next".<br/><br/>
+        Please rate how familiar you are with each of the following locations.
 
-        If you don't know a term, click "I don't know ...", but <b>visit the hyperlinked Wikipedia page to learn about it and answer the question</b>.
     </div>
     <g:form action="save" name="rating-form" method="post" params="${[page: page]}">
-        <div id="dontknow">I don't know<br/>this term</div>
         <div id="ratings">
             <g:each status="i" in="${questions}" var="q">
                 <div class="row ${ (i % 2) == 0 ? 'odd' : 'even'} num${i}" id="${q.questionNumber}" >
                     <table>
                         <tbody>
                         <tr class="first">
-                            <td class="interest">
-                                <a href="http://en.wikipedia.org/wiki/${q.location1.replaceAll(' ', '_').encodeAsURL()}" target="_blank">${q.location1}</a>
-                            </td>
-                            <td class="checkbox">
-                                <input type="checkbox"
-                                       name="unknown_${q.id}_${q.location1.hashCode().abs()}"
-                                       class="checks" value="${q.location1.hashCode().abs()}"
-                                       <g:if test="${q.location1Known == Boolean.FALSE}">checked</g:if> >
+                            <td class="interest" colspan="2">
+                                <a href="http://en.wikipedia.org/wiki/${q.location.replaceAll(' ', '_').encodeAsURL()}" target="_blank">${q.location}</a>
                             </td>
                             <td rowspan="2">
                                 <div class="rounded-corners rating-bars">
@@ -38,46 +29,33 @@
                                         <tr>
                                             <td>
                                                 <label>0 <input type="radio" name="${"radio_"+q.id}" value="1"
-                                                <g:if test="${q.result == 1}">checked</g:if>/></label>
+                                                <g:if test="${q.familiarity == 1}">checked</g:if>/></label>
                                             </td>
                                             <td>
                                                 <label>1 <input type="radio" name="${"radio_"+q.id}" value="2"
-                                                         <g:if test="${q.result == 2}">checked</g:if>/></label>
+                                                         <g:if test="${q.familiarity  == 2}">checked</g:if>/></label>
                                             </td>
                                             <td>
                                                 <label>2 <input type="radio" name="${"radio_"+q.id}" value="3"
-                                                         <g:if test="${q.result == 3}">checked</g:if>/></label>
+                                                         <g:if test="${q.familiarity  == 3}">checked</g:if>/></label>
                                             </td>
                                             <td>
                                                 <label>3 <input type="radio" name ="${"radio_"+q.id}" value="4"
-                                                         <g:if test="${q.result == 4}">checked</g:if>/></label>
+                                                         <g:if test="${q.familiarity  == 4}">checked</g:if>/></label>
                                             </td>
                                             <td>
                                                 <label>4 <input type="radio" name="${"radio_"+q.id}" value="5"
-                                                         <g:if test="${q.result == 5}">checked</g:if>/></label>
+                                                         <g:if test="${q.familiarity  == 5}">checked</g:if>/></label>
                                             </td>
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="no-assoc">
-                                    Not related
+                                    Don't recognize
                                 </div>
                                 <div class="str-assoc">
-                                    Strongly related
+                                    Been there several times
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="second">
-                            <td class="interest">
-                                <a href="http://en.wikipedia.org/wiki/${q.location2.replaceAll(' ', '_').encodeAsURL()}" target="_blank">${q.location2}</a>
-                            </td>
-                            <td class="checkbox">
-                                <input type="checkbox"
-                                       name="unknown_${q.id}_${q.location2.hashCode().abs()}"
-                                       class="checks"
-                                       id="${q.location2.hashCode().abs()}"
-                                       value="${q.location2.hashCode().abs()}"
-                                       <g:if test="${q.location2Known == Boolean.FALSE}">checked</g:if> >
                             </td>
                         </tr>
                         </tbody>
@@ -105,12 +83,9 @@
             var interests = div.find("td.interest");
             var checkboxes = div.find("input[type='checkbox']");
             var rating = div.find("input[type='radio']:checked").val();
-            ajaxLog("rating",
+            ajaxLog("familiarity",
                     qid,
                     $(interests[0]).text(),
-                    $(interests[1]).text(),
-                    $(checkboxes.get(0)).prop('checked'),
-                    $(checkboxes.get(1)).prop('checked'),
                     rating
             );
         }, 200);

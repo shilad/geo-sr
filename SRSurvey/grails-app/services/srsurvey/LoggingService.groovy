@@ -6,6 +6,10 @@ class LoggingService {
 
     private static File output = new File("./phrasepairs-log.txt")
 
+    def append(Person p, HttpServletRequest request, List tokens) {
+        append(p, request, tokens.collect({it.toString()}).join('\t'))
+    }
+
     def append(Person p, HttpServletRequest request, String message) {
         appendMany(p, request, [message])
     }

@@ -28,7 +28,7 @@ class DemographicController {
             p.gender = params.gender
         }
         p.education = params.education
-        for (String country : params.country) {
+        for (String country : params.list('country')) {
             LivedInLocation location = new LivedInLocation(country: country)
             p.addToHomes(location)
         }
@@ -50,11 +50,6 @@ class DemographicController {
             return
         }
 
-        //Assign Group (will happen on previous page)
-        // Move to rating page
-        if (p.survey.questions == null || p.survey.questions.isEmpty()) {
-            questionService.setQuestions(p, request)
-        }
 
         // Get the next country. If there are done, move onto ratings!
         Map<String, Integer> countryCounts = [:]

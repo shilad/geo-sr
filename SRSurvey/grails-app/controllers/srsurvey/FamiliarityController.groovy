@@ -1,14 +1,13 @@
 package srsurvey
 
-class RatingController {
-    static public final int QUESTIONS_PER_PAGE = 10
+class FamiliarityController {
+    static public final int QUESTIONS_PER_PAGE = 20
 
-    def questionService
     def personService
     def loggingService
 
-
     def show(){
+
         Person p = personService.getForSession(session)
         if (!p.hasConsented || !p.education) {
             redirect(url : '/')
@@ -20,18 +19,16 @@ class RatingController {
         }
 
         int page = params.page as int
-        List<Question> toAsk = p.survey.questions.findAll({it.page == page })
+        List<LocationFamiliarity> toAsk = p.survey.familiarity.findAll({it.page == page })
         if (toAsk.isEmpty()) throw new IllegalStateException()
-        for (Question q : toAsk) {
+        for (LocationFamiliarity lf : toAsk) {
             def tokens = [
-                    'showRating',
-                    q.id,
-                    q.page,
-                    q.questionNumber,
-                    q.location1,
-                    q.location2,
+                    'showFamiliarity',
+                    lf.page,
+                    lf.questionNumber,
+                    lf.location
             ]
-            loggingService.append(p, request, tokens.collect({it.toString()}).join('\t'))
+            loggingService.append(p, request, tokens)
         }
 
         render(view:'show', model:[
@@ -41,14 +38,34 @@ class RatingController {
     }
 
     def redirectToNextUnfinishedPage(Person p) {
-        if (p.survey.questions == null || p.survey.questions.isEmpty()) {
-            questionService.setQuestions(p, request)
+        if (p.survey.familiarity == null || p.survey.familiarity.isEmpty()) {
+            Set<String> uniques = [] as Set
+            for (Question q : p.survey.questions) {
+                uniques.add(q.location1)
+                uniques.add(q.location2)
+            }
+
+            List<String> ordered = uniques as List
+            Collections.shuffle(ordered)
+            for (int i = 0; i < ordered.size(); i++) {
+                String location = ordered[i]
+                LocationFamiliarity lf = new LocationFamiliarity(
+                                                location : location,
+                                                page : (i / QUESTIONS_PER_PAGE) as int,
+                                                questionNumber: i
+                                        )
+                p.survey.addToFamiliarity(lf)
+                loggingService.append(p, request, ['pickFamiliarity', lf.page, lf.questionNumber, lf.location])
+            }
+            p.save(flush: true)
         }
-        for (Question q : p.survey.questions) {
-            if (!q.hasAnswer()) {
-                redirect(action: 'show', params: [page : q.page])
+        int i = 0
+        for (LocationFamiliarity lc : p.survey.familiarity) {
+            if (lc.familiarity == null) {
+                redirect(action: 'show', params: [page : lc.page])
                 return
             }
+            i++
         }
         redirect(controller: 'familiarity', action: 'show')
     }

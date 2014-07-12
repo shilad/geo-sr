@@ -39,6 +39,8 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
+        runtime 'org.postgresql:postgresql:9.3-1100-jdbc4'
+
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         compile("autocomplete-server:autocomplete-server:0.5")
 

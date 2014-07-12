@@ -4,11 +4,14 @@ class Survey {
 
     String comment
     List questions
+    List familiarity
+    List valence
 
     static belongsTo = [person: Person]
     static hasMany = [
             questions: Question,
-            locations: LocationContext
+            familiarity: LocationFamiliarity,
+            valence: LocationValence,
     ]
 
     static transients = ['seenPairs']
