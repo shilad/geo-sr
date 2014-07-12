@@ -17,6 +17,7 @@ class QuestionService {
         orderer = new OrderQuestions();
         loadNeighborFile(new File("citiesToNeighbors4.txt"));
         log.info("read neighbors for ${neighbors.size()} cities")
+        println("read neighbors for ${neighbors.size()} cities")
     }
 
     /**
