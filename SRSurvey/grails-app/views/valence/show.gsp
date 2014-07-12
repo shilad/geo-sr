@@ -3,14 +3,16 @@
 <head>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
-    <title>Macademia survey: Location familiarity, page ${page + 1} of 4</title>
+    <title>Macademia survey: Location interest, page ${page + 1} of 4</title>
 
 </head>
 <body>
 <div class="rounded-corners rating" id="main-container">
-    <br/><h1>Macademia survey: Rate location familiarity (page ${page + 1} of 4)</h1>
+    <br/><h1>Macademia survey: Rate location(page ${page + 1} of 4)</h1>
     <div id="instructions">
-        Please rate how familiar you are with each of the following locations.
+        Please rate your agreement with the following statement:<br/><br/>
+
+        I would like to live in / near this location.
     </div>
     <g:form action="save" name="rating-form" method="post" params="${[page: page]}">
         <div id="ratings">
@@ -28,32 +30,32 @@
                                         <tr>
                                             <td>
                                                 <label>0 <input type="radio" name="${"radio_"+q.id}" value="1"
-                                                <g:if test="${q.familiarity == 1}">checked</g:if>/></label>
+                                                <g:if test="${q.valence == 1}">checked</g:if>/></label>
                                             </td>
                                             <td>
                                                 <label>1 <input type="radio" name="${"radio_"+q.id}" value="2"
-                                                         <g:if test="${q.familiarity  == 2}">checked</g:if>/></label>
+                                                         <g:if test="${q.valence  == 2}">checked</g:if>/></label>
                                             </td>
                                             <td>
                                                 <label>2 <input type="radio" name="${"radio_"+q.id}" value="3"
-                                                         <g:if test="${q.familiarity  == 3}">checked</g:if>/></label>
+                                                         <g:if test="${q.valence  == 3}">checked</g:if>/></label>
                                             </td>
                                             <td>
                                                 <label>3 <input type="radio" name ="${"radio_"+q.id}" value="4"
-                                                         <g:if test="${q.familiarity  == 4}">checked</g:if>/></label>
+                                                         <g:if test="${q.valence  == 4}">checked</g:if>/></label>
                                             </td>
                                             <td>
                                                 <label>4 <input type="radio" name="${"radio_"+q.id}" value="5"
-                                                         <g:if test="${q.familiarity  == 5}">checked</g:if>/></label>
+                                                         <g:if test="${q.valence  == 5}">checked</g:if>/></label>
                                             </td>
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="no-assoc">
-                                    Don't recognize
+                                    Strongly disagree
                                 </div>
                                 <div class="str-assoc">
-                                    Been there several times
+                                    Strongly agree
                                 </div>
                             </td>
                         </tr>
@@ -80,7 +82,7 @@
         window.setTimeout(function() {
             var location = div.find("td.interest a").text();
             var rating = div.find("input[type='radio']:checked").val();
-            ajaxLog("familiarity",
+            ajaxLog("valence",
                     location,
                     rating
             );

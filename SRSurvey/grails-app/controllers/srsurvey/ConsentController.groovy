@@ -24,6 +24,7 @@ class ConsentController {
         Person p = personService.getForSession(session)
         p.workerId = params.workerId
         p.hasConsented = true
+        p.code = mturkService.getCode()
         p.save()
 
         loggingService.append(p, request, "consent")

@@ -5,7 +5,6 @@ import grails.converters.JSON
 class DemographicController {
     def personService
     def loggingService
-    def questionService
     def cityService
 
     def showBasic() {

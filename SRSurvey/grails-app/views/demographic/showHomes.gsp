@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Macademia survey: Places you've lived</title>
+    <title>Geographic relatedness survey: Places you've lived</title>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
 
@@ -17,14 +17,14 @@
 <body>
 <div class="homes rounded-corners expertise" id="main-container">
     <br>
-    <h1>Places you've lived in ${country}</h1>
+    <h1>Places you've lived in ${country} (page 2 of 14)</h1>
     <g:form controller="demographic" action="saveHomes" method="post">
 
     <div class="question">
         <div class="prompt">Please list all the places (i.e. cities) in ${country} you've lived for at least a month:</div>
         <div id="city-list" class="response">
             <div class="city template">
-                <r:img uri="/images/cancel.gif"/>&nbsp;<span>Chicago, Illinois</span>
+                <r:img uri="/images/cancel.gif"/>&nbsp;<span>Fake, Fake</span>
                 <input type="hidden" name="city" value="FAKE"/>
             </div>
             <input type="text" size="40" value="" id="cityac" class="ui-autocomplete-input" autocomplete="on"/>

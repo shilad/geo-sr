@@ -1,6 +1,6 @@
 package srsurvey
 
-class FamiliarityController {
+class ValenceController {
     static public final int QUESTIONS_PER_PAGE = 20
 
     def personService
@@ -19,11 +19,11 @@ class FamiliarityController {
         }
 
         int page = params.page as int
-        List<LocationFamiliarity> toAsk = p.survey.familiarity.findAll({it.page == page })
+        List<LocationValence> toAsk = p.survey.valence.findAll({it.page == page })
         if (toAsk.isEmpty()) throw new IllegalStateException()
-        for (LocationFamiliarity lf : toAsk) {
+        for (LocationValence lf : toAsk) {
             def tokens = [
-                    'showFamiliarity',
+                    'showvalence',
                     lf.page,
                     lf.questionNumber,
                     lf.location
@@ -38,7 +38,7 @@ class FamiliarityController {
     }
 
     def redirectToNextUnfinishedPage(Person p) {
-        if (p.survey.familiarity == null || p.survey.familiarity.isEmpty()) {
+        if (p.survey.valence == null || p.survey.valence.isEmpty()) {
             Set<String> uniques = [] as Set
             for (Question q : p.survey.questions) {
                 uniques.add(q.location1)
@@ -49,25 +49,25 @@ class FamiliarityController {
             Collections.shuffle(ordered)
             for (int i = 0; i < ordered.size(); i++) {
                 String location = ordered[i]
-                LocationFamiliarity lf = new LocationFamiliarity(
+                LocationValence lf = new LocationValence(
                                                 location : location,
                                                 page : (i / QUESTIONS_PER_PAGE) as int,
                                                 questionNumber: i
                                         )
-                p.survey.addToFamiliarity(lf)
-                loggingService.append(p, request, ['pickFamiliarity', lf.page, lf.questionNumber, lf.location])
+                p.survey.addToValence(lf)
+                loggingService.append(p, request, ['pickvalence', lf.page, lf.questionNumber, lf.location])
             }
             p.save(flush: true)
         }
         int i = 0
-        for (LocationFamiliarity lc : p.survey.familiarity) {
-            if (lc.familiarity == null) {
+        for (LocationValence lc : p.survey.valence) {
+            if (lc.valence == null) {
                 redirect(action: 'show', params: [page : lc.page])
                 return
             }
             i++
         }
-        redirect(controller: 'familiarity', action: 'show')
+        redirect(controller: 'valence', action: 'show')
     }
 
     def save(){
@@ -78,7 +78,7 @@ class FamiliarityController {
         }
 
         int page = params.page as int
-        List<Question> toAsk = p.survey.familiarity.findAll({it.page == page })
+        List<Question> toAsk = p.survey.valence.findAll({it.page == page })
         if (toAsk.isEmpty()) throw new IllegalStateException()
 
         for (qparam in params){
@@ -87,17 +87,17 @@ class FamiliarityController {
                 // this is the score "+q.value+". Put these into the database."
                 String [] tokens = qparam.key.split("_")
                 int lid = tokens[1] as int
-                LocationFamiliarity lf = LocationFamiliarity.get(lid)
-                lf.familiarity = qparam.value as int
+                LocationValence lf = LocationValence.get(lid)
+                lf.valence = qparam.value as int
             }
         }
 
-        for (LocationFamiliarity l : toAsk) {
+        for (LocationValence l : toAsk) {
             l.save()
         }
 
         if (page == 3) {
-            redirect(controller: 'valence', action: 'show')
+            redirect(controller: 'finish', action: 'show')
         } else {
             redirect(action: 'show', params: [page: page+1])
         }
