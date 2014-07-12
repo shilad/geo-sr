@@ -3,14 +3,14 @@
 <head>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
-    <title>Macademia survey: Location familiarity, page ${page + 7} of 15</title>
+    <title>Geographic relatedness survey: Location familiarity, page ${page + 7} of 15</title>
 
 </head>
 <body>
 <div class="rounded-corners rating" id="main-container">
-    <br/><h1>Macademia survey: Rate location familiarity (page ${page + 7} of 15)</h1>
+    <h1>Rate location familiarity (page ${page + 7} of 15)</h1>
     <div id="instructions">
-        Please rate how familiar you are with each of the following locations.
+        Please rate <b>how familiar</b> you are with each of the following locations.
     </div>
     <g:form action="save" name="rating-form" method="post" params="${[page: page]}">
         <div id="ratings">

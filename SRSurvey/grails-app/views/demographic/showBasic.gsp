@@ -52,7 +52,6 @@
             <label><input type="checkbox" name="country" value="Pakistan"/>Pakistan</label><br/>
             <label><input type="checkbox" name="country" value="Spain"/>Spain</label><br/>
             <label><input type="checkbox" name="country" value="United Kingdom"/>United Kingdom</label><br/>
-            <label><input type="checkbox" name="country" value="none" id="nonecheck"/>None of the above</label><br/>
         </div>
     </div>
     <div class="question">

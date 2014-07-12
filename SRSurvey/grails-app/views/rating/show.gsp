@@ -3,17 +3,17 @@
 <head>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
-    <title>Macademia survey: Concept relatedness, page ${page + 3} of 15</title>
+    <title>Geographic relatedness survey: Concept relatedness, page ${page + 3} of 15</title>
 
 </head>
 <body>
 <div class="rounded-corners rating" id="main-container">
-    <br/><h1>Macademia survey: Rate concept relatedness (page ${page + 3} of 15)</h1>
+    <h1>Rate concept relatedness (page ${page + 3} of 15)</h1>
     <div id="instructions">
         Please rate how related each pair of concepts is.
         When you finish rating all pairs, click "next".<br/><br/>
 
-        If you don't know a term, click "I don't know ...", but <b>visit the hyperlinked Wikipedia page to learn about it and answer the question</b>.
+        If you don't know a term, click "I don't know ...", but <b>visit the hyperlinked Wikipedia page</b> to learn about it and answer the question.
     </div>
     <g:form action="save" name="rating-form" method="post" params="${[page: page]}">
         <div id="dontknow">I don't know<br/>this term</div>

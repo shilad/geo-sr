@@ -12,6 +12,15 @@
     padding: 5px;
   }
 
+  #cityac {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  div.city {
+    padding-bottom: 5px;
+  }
+
   div.question {
     @import "compass/utilities/general/clearfix";
     div.prompt {
@@ -35,17 +44,7 @@
     display: none;
     padding: 30px;
     font-weight: bold;
-  }
-
-  #errorPrimary{
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 35px;
-    color:#FF0000;
-  }
-
-  #errorSecondary{
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 35px;
-    color:#FF0000;
+    vertical-align: center;
+    position: absolute;
   }
 }
