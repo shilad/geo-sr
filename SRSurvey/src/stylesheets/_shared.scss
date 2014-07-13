@@ -30,6 +30,13 @@ b {
   font-weight: bold;
 }
 
+.instructions {
+  p {
+    line-height: 1.2em;
+    margin-bottom: 15px;
+  }
+}
+
 .myButton {
 
   -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;

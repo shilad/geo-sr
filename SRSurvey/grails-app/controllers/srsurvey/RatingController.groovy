@@ -7,6 +7,15 @@ class RatingController {
     def personService
     def loggingService
 
+    def instructions() {
+        Person p = personService.getForSession(session)
+        if (!p.hasConsented || !p.education) {
+            redirect(url : '/')
+            return
+        }
+        render(view : 'instructions')
+    }
+
 
     def show(){
         Person p = personService.getForSession(session)
@@ -50,7 +59,7 @@ class RatingController {
                 return
             }
         }
-        redirect(controller: 'familiarity', action: 'show')
+        redirect(controller: 'familiarity', action: 'instructions')
     }
 
     def save(){
@@ -108,6 +117,6 @@ class RatingController {
     }
 
     def index() {
-        redirect(action: 'show')
+        redirect(action: 'instructions')
     }
 }

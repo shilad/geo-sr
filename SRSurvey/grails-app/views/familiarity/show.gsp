@@ -50,10 +50,10 @@
                                     </table>
                                 </div>
                                 <div class="no-assoc">
-                                    Don't recognize
+                                    Don't know it
                                 </div>
                                 <div class="str-assoc">
-                                    Been there several times
+                                    Very familiar with it
                                 </div>
                             </td>
                         </tr>

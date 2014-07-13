@@ -6,6 +6,15 @@ class FamiliarityController {
     def personService
     def loggingService
 
+    def instructions() {
+        Person p = personService.getForSession(session)
+        if (!p.hasConsented || !p.education) {
+            redirect(url : '/')
+            return
+        }
+        render(view : 'instructions')
+    }
+
     def show(){
 
         Person p = personService.getForSession(session)
@@ -98,13 +107,13 @@ class FamiliarityController {
 
         int maxPage = p.survey.familiarity*.page.max()
         if (page == maxPage) {
-            redirect(controller: 'valence', action: 'show')
+            redirect(controller: 'valence', action: 'instructions')
         } else {
             redirect(action: 'show', params: [page: page+1])
         }
     }
 
     def index() {
-        redirect(action: 'show')
+        redirect(action: 'instructions')
     }
 }

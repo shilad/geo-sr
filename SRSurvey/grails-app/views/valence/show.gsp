@@ -12,7 +12,7 @@
     <div id="instructions">
         Please rate your agreement with the following statement:<br/><br/>
 
-        I would like to live in / near this location.
+        <b>I would like to live in / near this location.</b>
     </div>
     <g:form action="save" name="rating-form" method="post" params="${[page: page]}">
         <div id="ratings">

@@ -36,7 +36,10 @@ h1 { font-size: 24px; font-weight: bold; margin: 10px 0 20px; }
 /* line 29, ../../src/stylesheets/_shared.scss */
 b { font-weight: bold; }
 
-/* line 33, ../../src/stylesheets/_shared.scss */
+/* line 34, ../../src/stylesheets/_shared.scss */
+.instructions p { line-height: 1.2em; margin-bottom: 15px; }
+
+/* line 40, ../../src/stylesheets/_shared.scss */
 .myButton { -moz-box-shadow: inset 0px 1px 0px 0px #ffffff; -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff; box-shadow: inset 0px 1px 0px 0px #ffffff; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #ededed), color-stop(100%, #dfdfdf)); background-image: -webkit-linear-gradient(#ededed 5%, #dfdfdf); background-image: -moz-linear-gradient(#ededed 5%, #dfdfdf); background-image: -o-linear-gradient(#ededed 5%, #dfdfdf); background-image: linear-gradient(#ededed 5%, #dfdfdf); background-color: #ededed; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; border: 1px solid #666563; display: inline-block; color: #2b2926; font-family: arial; font-size: 15px; font-weight: bold; padding: 6px 14px; text-decoration: none; text-shadow: 0px 1px 0px #ffffff; cursor: pointer; }
 
 /* line 10, ../../../../../../../../usr/local/Cellar/jruby/1.7.12/libexec/lib/ruby/gems/shared/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
@@ -50,16 +53,16 @@ html, body { height: 100%; }
 /* line 20, ../../../../../../../../usr/local/Cellar/jruby/1.7.12/libexec/lib/ruby/gems/shared/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 #footer { clear: both; position: relative; height: 54px; }
 
-/* line 72, ../../src/stylesheets/_shared.scss */
+/* line 79, ../../src/stylesheets/_shared.scss */
 #footer { text-align: center; }
 
-/* line 74, ../../src/stylesheets/_shared.scss */
+/* line 81, ../../src/stylesheets/_shared.scss */
 .myButton:hover { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #dfdfdf), color-stop(100%, #ededed)); background-image: -webkit-linear-gradient(#dfdfdf 5%, #ededed); background-image: -moz-linear-gradient(#dfdfdf 5%, #ededed); background-image: -o-linear-gradient(#dfdfdf 5%, #ededed); background-image: linear-gradient(#dfdfdf 5%, #ededed); background-color: #dfdfdf; }
 
-/* line 81, ../../src/stylesheets/_shared.scss */
+/* line 88, ../../src/stylesheets/_shared.scss */
 .myButton:active { position: relative; top: 1px; }
 
-/* line 86, ../../src/stylesheets/_shared.scss */
+/* line 93, ../../src/stylesheets/_shared.scss */
 .myInput { padding: 5px; width: 266px; height: 30px; font-size: 100%; background-color: whitesmoke; resize: none; border: 2.4px solid #000000; }
 
 /* line 3, ../../src/stylesheets/_consent.scss */

@@ -70,7 +70,7 @@ class DemographicController {
         }
 
         if (nextCountry == null) {
-            redirect(controller : 'rating', action : 'show')
+            redirect(controller : 'rating', action : 'instructions')
         }  else {
             render(view: 'showHomes', model: [person: p, country : nextCountry])
         }

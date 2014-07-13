@@ -6,6 +6,15 @@ class ValenceController {
     def personService
     def loggingService
 
+    def instructions() {
+        Person p = personService.getForSession(session)
+        if (!p.hasConsented || !p.education) {
+            redirect(url : '/')
+            return
+        }
+        render(view : 'instructions')
+    }
+
     def show(){
 
         Person p = personService.getForSession(session)
@@ -104,6 +113,6 @@ class ValenceController {
     }
 
     def index() {
-        redirect(action: 'show')
+        redirect(action: 'instructions')
     }
 }
