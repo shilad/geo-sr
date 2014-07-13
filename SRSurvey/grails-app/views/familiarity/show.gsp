@@ -10,7 +10,18 @@
 <div class="rounded-corners rating" id="main-container">
     <h1>Rate location familiarity (page ${page + 7} of 15)</h1>
     <div id="instructions">
-        Please rate <b>how familiar</b> you are with each of the following locations.
+        <p>Please rate <b>how familiar</b> you are with each of the following locations.</p>
+        <p>
+            <br/>As a guide, use the following scale:
+        </p>
+
+        <ul>
+            <li><b>Rating 0</b>: Didn't recognize the location.</li>
+            <li><b>Rating 1</b>: Recognize the location.</li>
+            <li><b>Rating 2</b>: Know some background about the location.</li>
+            <li><b>Rating 3</b>: Visited the location once.</li>
+            <li><b>Rating 4</b>: Visited the location multiple times.</li>
+        </ul>
     </div>
     <g:form action="save" name="rating-form" method="post" params="${[page: page]}">
         <div id="ratings">

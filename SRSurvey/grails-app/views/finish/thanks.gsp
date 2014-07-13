@@ -34,7 +34,7 @@
         Brent Hecht (<a href="mailto:bhecht@cs.umn.edu">bhecht@cs.umn.edu</a>)
     </p>
     <p>
-        The Macademia Team:</br>
+        The WikiBrain Team:</br>
         <r:img uri="/images/team.jpg"/><br/>
     Front row: Zixiao Wang, Yulun Li, Margaret Giesel, Jesse Russell<br/>
     Back row: Matt Lesicko, Ari Wieland, Ben Hillman, Shilad Sen, Sam Naden, Rebecca Gold<br/>

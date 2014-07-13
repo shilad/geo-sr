@@ -1,7 +1,7 @@
 package srsurvey
 
 class ValenceController {
-    static public final int QUESTIONS_PER_PAGE = 20
+    static public final int QUESTIONS_PER_PAGE = 15
 
     def personService
     def loggingService
@@ -76,7 +76,7 @@ class ValenceController {
             }
             i++
         }
-        redirect(controller: 'valence', action: 'show')
+        redirect(action: 'show', params: [page : 0])
     }
 
     def save(){

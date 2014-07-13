@@ -1,7 +1,7 @@
 package srsurvey
 
 class FamiliarityController {
-    static public final int QUESTIONS_PER_PAGE = 20
+    static public final int QUESTIONS_PER_PAGE = 15
 
     def personService
     def loggingService
@@ -47,7 +47,9 @@ class FamiliarityController {
     }
 
     def redirectToNextUnfinishedPage(Person p) {
+        println("here 0")
         if (p.survey.familiarity == null || p.survey.familiarity.isEmpty()) {
+            println("here 1")
             Set<String> uniques = [] as Set
             for (Question q : p.survey.questions) {
                 uniques.add(q.location1)
@@ -67,6 +69,7 @@ class FamiliarityController {
                 loggingService.append(p, request, ['pickFamiliarity', lf.page, lf.questionNumber, lf.location])
             }
             p.save(flush: true)
+            println("here ${p.survey.familiarity.size()}")
         }
         int i = 0
         for (LocationFamiliarity lc : p.survey.familiarity) {
@@ -76,7 +79,7 @@ class FamiliarityController {
             }
             i++
         }
-        redirect(controller: 'familiarity', action: 'show')
+        redirect(action: 'show', params: [page : 0])
     }
 
     def save(){

@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Macademia survey: Background</title>
+    <title>Geographic relatedness survey: Background</title>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
     <r:require modules="jquery-ui" />
