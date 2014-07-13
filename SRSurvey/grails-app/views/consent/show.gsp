@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Macademia survey: Context-sensitive semantic relatedness</title>
+    <title>Survey: Geographic semantic relatedness</title>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
     <r:script>
@@ -68,7 +68,7 @@
                     This study has been approved by Macalester College's Institutional Review Board (IRB),
                     and is funded in part by National Science Foundation grant grant IIS-0964697.
                     <div class="team">
-                        The Macademia Team:</br>
+                        The WikIBrain Team:</br>
                         <r:img uri="/images/team.jpg"/><br/>
                     </div>
                 </div>
