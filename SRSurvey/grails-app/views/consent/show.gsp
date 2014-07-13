@@ -32,7 +32,7 @@
 </head>
 <body>
 <div class= "consent rounded-corners" id="main-container">
-    <h1>Macademia survey: Context-sensitive semantic relatedness</h1>
+    <h1>Survey: Geographic relatedness</h1>
 <g:form controller="consent" action="save" name = "consent-form" method="post">
     <table>
         <tr>
