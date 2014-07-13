@@ -69,6 +69,7 @@ class QuestionService {
         for (int pageNum = 0; pageNum < pages.length; pageNum++) {
             for (SpatialConceptPair pair : pages[pageNum]) {
                 Question q = new Question(i, pageNum, pair.firstConcept.title, pair.secondConcept.title, p.survey)
+                q.maybeSwap()
                 p.survey.addToQuestions(q)
                 messages.add("p\t${pair.firstConcept}\t${pair.secondConcept}")
                 i++
