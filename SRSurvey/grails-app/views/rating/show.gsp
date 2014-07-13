@@ -92,8 +92,6 @@
                     qid,
                     $(interests[0]).text(),
                     $(interests[1]).text(),
-                    $(checkboxes.get(0)).prop('checked'),
-                    $(checkboxes.get(1)).prop('checked'),
                     rating
             );
         }, 200);
@@ -115,17 +113,12 @@
             }
             return isComplete;
         });
-        $("input[type='checkbox']").click(function () {
-            var $this = $(this);
-            var row = $this.parents(".row");
-            logRating(row);
-        });
+
         $("input[type='radio']").click(function () {
             var $this = $(this);
             if ($this.is(':checked')) {
                 var row = $this.parents(".row");
                 row.removeClass("error");
-                row.find("input[type=checkbox]").prop('checked', false);
                 logRating(row);
             }
         });
