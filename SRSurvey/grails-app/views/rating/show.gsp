@@ -12,25 +12,16 @@
     <div id="instructions">
         Please rate how related each pair of concepts is.
         When you finish rating all pairs, click "next".<br/><br/>
-
-        If you don't know a term, click "I don't know ...", but <b>visit the hyperlinked Wikipedia page</b> to learn about it and answer the question.
     </div>
     <g:form action="save" name="rating-form" method="post" params="${[page: page]}">
-        <div id="dontknow">I don't know<br/>this term</div>
         <div id="ratings">
             <g:each status="i" in="${questions}" var="q">
                 <div class="row ${ (i % 2) == 0 ? 'odd' : 'even'} num${i}" id="${q.questionNumber}" >
                     <table>
                         <tbody>
                         <tr class="first">
-                            <td class="interest">
+                            <td class="interest" colspan="2">
                                 <a href="http://en.wikipedia.org/wiki/${q.location1.replaceAll(' ', '_').encodeAsURL()}" target="_blank">${q.location1}</a>
-                            </td>
-                            <td class="checkbox">
-                                <input type="checkbox"
-                                       name="unknown_${q.id}_${q.location1.hashCode().abs()}"
-                                       class="checks" value="${q.location1.hashCode().abs()}"
-                                       <g:if test="${q.location1Known == Boolean.FALSE}">checked</g:if> >
                             </td>
                             <td rowspan="2">
                                 <div class="rounded-corners rating-bars">
@@ -68,16 +59,8 @@
                             </td>
                         </tr>
                         <tr class="second">
-                            <td class="interest">
+                            <td class="interest" colspan="2">
                                 <a href="http://en.wikipedia.org/wiki/${q.location2.replaceAll(' ', '_').encodeAsURL()}" target="_blank">${q.location2}</a>
-                            </td>
-                            <td class="checkbox">
-                                <input type="checkbox"
-                                       name="unknown_${q.id}_${q.location2.hashCode().abs()}"
-                                       class="checks"
-                                       id="${q.location2.hashCode().abs()}"
-                                       value="${q.location2.hashCode().abs()}"
-                                       <g:if test="${q.location2Known == Boolean.FALSE}">checked</g:if> >
                             </td>
                         </tr>
                         </tbody>
