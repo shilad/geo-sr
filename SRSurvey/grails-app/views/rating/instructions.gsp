@@ -22,21 +22,13 @@
             In the next section you'll rate <b>how related</b> pairs of locations are.
         </p>
         <p>
-            For example, the image below asks you how related the state of "Minnesota" is to "Macalester College."
-            Please rate each of the 37 pairs on a scale of 0 (not related) to 4 (strongly related).
+            <b>If you don't recognize a location, click the "I don't know this term" column.</b>
         </p>
         <p>
             <r:img uri="/images/rate_sr.png"/>
         </p>
         <p>
-            <b>You must rate the relatedness of every pair of locations.</b>
-        </p>
-        <p>
-            If you <b>don't know</b> a location, you can learn about it by clicking the blue link.
-            The Wikipedia article associated with the concept will open in a separate window.
-        </p>
-        <p>
-
+            You must respond to every question by rating it or clicking the "I don't know" box.
         </p>
         <p>
             <g:submitButton name="continue" value="continue" class="myButton" title="continue"/>
