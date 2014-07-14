@@ -42,7 +42,10 @@ class ValenceController {
 
         int page = params.page as int
         List<LocationValence> toAsk = p.survey.valence.findAll({it.page == page })
-        if (toAsk.isEmpty()) throw new IllegalStateException()
+        if (toAsk.isEmpty()) {
+            redirect(controller: 'finish', action: 'show')
+            return
+        }
         int maxPage = p.survey.valence*.page.max()
 
         for (LocationValence lf : toAsk) {
