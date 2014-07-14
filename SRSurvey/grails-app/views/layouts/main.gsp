@@ -20,7 +20,7 @@
         </div>
 		<div id="footer" role="contentinfo">
             For questions about this research project, please contact
-                    <a href="mailto:ssen@macalester.edu">Shilad Sen</a> or <a href="mailto:bhecht@cs.umn.edu">Brent Hecht</a>
+                    <a href="mailto:ssen@macalester.edu">Shilad Sen</a>
 		</div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>
