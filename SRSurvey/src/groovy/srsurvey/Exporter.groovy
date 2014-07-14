@@ -1,13 +1,20 @@
 package srsurvey
 
+import org.wikibrain.spatial.maxima.ExportEnhancer;
+
 /**
  * @author Shilad Sen
  */
 class Exporter {
+    public static final File PEOPLE = new File("dat/people.tsv");
+    public static final File QUESTIONS = new File("dat/questions.tsv");
+    public static final File ENHANCED_QUESTIONS = new File("dat/questions.enhanced.tsv");
 
     def synchronized export() {
-        writePeople("dat/person.tsv")
-        writeQuestions("dat/questions.tsv")
+        writePeople(PEOPLE.toString())
+        writeQuestions(QUESTIONS.toString())
+        ExportEnhancer enhancer = new ExportEnhancer();
+        enhancer.enhance(PEOPLE, QUESTIONS, ENHANCED_QUESTIONS);
     }
 
 
@@ -75,7 +82,7 @@ class Exporter {
 
         def fields = [
                 'grailsId',
-                'awsId',
+                'amazonId',
                 'page',
                 'question',
                 'location1',
