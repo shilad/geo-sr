@@ -52,8 +52,8 @@
                     Brent Hecht (<a href="mailto:bhecht@cs.umn.edu">bhecht@cs.umn.edu</a>)<br/>
 
                     <h4>Are there any risks to me?</h4>
-                    There are no significant risks associated with this survey.
-                    We do not collect any identifying personal information except for your Amazon Worker ID.
+                    There are no significant risks associated with this survey.<br/>
+                    We do not collect any identifying personal information except<br/> for your Amazon Worker ID.
 
                     <h4>Are there any benefits to me?</h4>
                     We don't expect any direct benefits to you from participation in this study.

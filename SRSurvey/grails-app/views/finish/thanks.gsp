@@ -36,8 +36,8 @@
     <p>
         The WikiBrain Team:</br>
         <r:img uri="/images/team.jpg"/><br/>
-    Front row: Zixiao Wang, Yulun Li, Margaret Giesel, Jesse Russell<br/>
-    Back row: Matt Lesicko, Ari Wieland, Ben Hillman, Shilad Sen, Sam Naden, Rebecca Gold<br/>
+    Front row: Laura Souza Vonessen, Huy Mai, Ben Mathers, Becca Harper<br/>
+    Back row: Matthew Wright, Shilad Sen, Sam Horlbeck Olsen<br/>
     </p>
 
 </div>
