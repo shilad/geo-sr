@@ -25,6 +25,7 @@ class ValenceController {
                 }
             }
         }
+        return blacklist.contains(location)
     }
 
     def show(){
