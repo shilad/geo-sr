@@ -97,7 +97,10 @@ class FamiliarityController {
 
         int page = params.page as int
         List<LocationFamiliarity> toAsk = p.survey.familiarity.findAll({it.page == page })
-        if (toAsk.isEmpty()) throw new IllegalStateException()
+        if (toAsk.isEmpty()) {
+            redirect(controller: 'valence', action: 'instructions')
+            return
+        }
 
         for (qparam in params){
             if(qparam.key.startsWith("radio")){
