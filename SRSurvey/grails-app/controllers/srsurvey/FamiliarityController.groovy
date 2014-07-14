@@ -30,6 +30,8 @@ class FamiliarityController {
         int page = params.page as int
         List<LocationFamiliarity> toAsk = p.survey.familiarity.findAll({it.page == page })
         if (toAsk.isEmpty()) throw new IllegalStateException()
+        int maxPage = p.survey.familiarity*.page.max()
+
         for (LocationFamiliarity lf : toAsk) {
             def tokens = [
                     'showFamiliarity',
@@ -42,22 +44,26 @@ class FamiliarityController {
 
         render(view:'show', model:[
                 questions: toAsk,
+                numPages : (maxPage + 1),
                 page: page
         ])
     }
 
     def redirectToNextUnfinishedPage(Person p) {
-        println("here 0")
         if (p.survey.familiarity == null || p.survey.familiarity.isEmpty()) {
-            println("here 1")
             Set<String> uniques = [] as Set
             for (Question q : p.survey.questions) {
-                uniques.add(q.location1)
-                uniques.add(q.location2)
+                if (q.result != null && q.result >= 0) {
+                    uniques.add(q.location1)
+                    uniques.add(q.location2)
+                }
             }
 
             List<String> ordered = uniques as List
             Collections.shuffle(ordered)
+            if (ordered.size() > QUESTIONS_PER_PAGE + 4) {
+                ordered.add(ordered.size() - 4, ordered.get((QUESTIONS_PER_PAGE / 2) as int))
+            }
             for (int i = 0; i < ordered.size(); i++) {
                 String location = ordered[i]
                 LocationFamiliarity lf = new LocationFamiliarity(

@@ -110,7 +110,7 @@ class RatingController {
         }
 
         if (page == 3) {
-            redirect(controller: 'familiarity', action: 'show')
+            redirect(controller: 'familiarity', action: 'instructions')
         } else {
             redirect(action: 'show', params: [page: page+1])
         }

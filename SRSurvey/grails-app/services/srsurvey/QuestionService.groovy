@@ -71,7 +71,7 @@ class QuestionService {
                 Question q = new Question(i, pageNum, pair.firstConcept.title, pair.secondConcept.title, p.survey)
                 q.maybeSwap()
                 p.survey.addToQuestions(q)
-                messages.add("p\t${pair.firstConcept}\t${pair.secondConcept}")
+                messages.add("question\t${pair.firstConcept.title}\t${pair.secondConcept.title}")
                 i++
             }
         }

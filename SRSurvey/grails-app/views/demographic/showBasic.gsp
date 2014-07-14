@@ -17,7 +17,7 @@
 <body>
 <div class= "rounded-corners expertise" id="main-container">
 
-    <h1>Geographic relatedness survey: Background (page 1 of 14)</h1>
+    <h1>Geographic relatedness survey: Background</h1>
 
     <g:form action="saveBasic">
 

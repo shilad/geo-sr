@@ -3,12 +3,12 @@
 <head>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
-    <title>Location interest, page ${page + 11} of 15</title>
+    <title>Location interest, page ${page + 1} of ${numPages}</title>
 
 </head>
 <body>
 <div class="rounded-corners rating" id="main-container">
-    <h1>Rate location(page ${page + 11} of 15)</h1>
+    <h1>Rate location (page ${page + 1} of ${numPages})</h1>
     <div id="instructions">
         Please rate your agreement with the following statement:<br/><br/>
 
@@ -22,7 +22,7 @@
                         <tbody>
                         <tr class="first">
                             <td class="interest" colspan="2">
-                                <a href="http://en.wikipedia.org/wiki/${q.location.replaceAll(' ', '_').encodeAsURL()}" target="_blank">${q.location}</a>
+                                ${q.location}
                             </td>
                             <td rowspan="2">
                                 <div class="rounded-corners rating-bars">
@@ -80,7 +80,7 @@
     // Hack: waits 200 millis for everything to clear
     function logRating(div) {
         window.setTimeout(function() {
-            var location = div.find("td.interest a").text();
+            var location = div.find("td.interest").text();
             var rating = div.find("input[type='radio']:checked").val();
             ajaxLog("valence",
                     location,

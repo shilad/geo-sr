@@ -3,12 +3,12 @@
 <head>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
-    <title>Geographic relatedness survey: Location familiarity, page ${page + 7} of 15</title>
+    <title>Geographic relatedness survey: Location familiarity, page ${page + 1} of ${numPages}</title>
 
 </head>
 <body>
 <div class="rounded-corners rating" id="main-container">
-    <h1>Rate location familiarity (page ${page + 7} of 15)</h1>
+    <h1>Rate location familiarity (page ${page + 1} of ${numPages})</h1>
     <div id="instructions">
         <p>Please rate <b>how familiar</b> you are with each of the following locations.</p>
         <p>
@@ -16,11 +16,11 @@
         </p>
 
         <ul>
-            <li><b>Rating 0</b>: Didn't recognize the location.</li>
-            <li><b>Rating 1</b>: Recognize the location.</li>
-            <li><b>Rating 2</b>: Know some background about the location.</li>
-            <li><b>Rating 3</b>: Visited the location once.</li>
-            <li><b>Rating 4</b>: Visited the location multiple times.</li>
+            <li><b>Rating 0</b>: Don't recognize the location.</li>
+            <li><b>Rating 1</b>: Recognize the location, but know almost nothing about it.</li>
+            <li><b>Rating 2</b>: Know basic information about the location.</li>
+            <li><b>Rating 3</b>: Know this location well.</li>
+            <li><b>Rating 4</b>: Consider myself "a local" for this location.</li>
         </ul>
     </div>
     <g:form action="save" name="rating-form" method="post" params="${[page: page]}">
@@ -31,7 +31,7 @@
                         <tbody>
                         <tr class="first">
                             <td class="interest" colspan="2">
-                                <a href="http://en.wikipedia.org/wiki/${q.location.replaceAll(' ', '_').encodeAsURL()}" target="_blank">${q.location}</a>
+                                ${q.location}
                             </td>
                             <td rowspan="2">
                                 <div class="rounded-corners rating-bars">
@@ -61,10 +61,10 @@
                                     </table>
                                 </div>
                                 <div class="no-assoc">
-                                    Don't know it
+                                    Don't recognize
                                 </div>
                                 <div class="str-assoc">
-                                    Very familiar with it
+                                    I'm a "local"
                                 </div>
                             </td>
                         </tr>
@@ -89,7 +89,7 @@
     // Hack: waits 200 millis for everything to clear
     function logRating(div) {
         window.setTimeout(function() {
-            var location = div.find("td.interest a").text();
+            var location = div.find("td.interest").text();
             var rating = div.find("input[type='radio']:checked").val();
             ajaxLog("familiarity",
                     location,

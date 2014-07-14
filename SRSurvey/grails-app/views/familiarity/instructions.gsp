@@ -26,24 +26,17 @@
         </p>
 
         <ul>
-                <li><b>Rating 0</b>: Didn't recognize the location.</li>
-                <li><b>Rating 1</b>: Recognize the location.</li>
-                <li><b>Rating 2</b>: Know some background about the location.</li>
-                <li><b>Rating 3</b>: Visited the location once.</li>
-                <li><b>Rating 4</b>: Visited the location multiple times.</li>
-            </ul>
-        <p>
-            If you read the Wikipedia page about the location while taking the survey, your rating should reflect your familiarity before taking the survey.
-        </p>
+            <li><b>Rating 0</b>: Don't recognize the location.</li>
+            <li><b>Rating 1</b>: Recognize the location, but know almost nothing about it.</li>
+            <li><b>Rating 2</b>: Know basic information about the location.</li>
+            <li><b>Rating 3</b>: Know this location well.</li>
+            <li><b>Rating 4</b>: Consider myself "a local" for this location.</li>
+        </ul>
         <p>
             <r:img uri="/images/rate_familiarity.png"/>
         </p>
         <p>
-            <b>You must rate your familiarity of every location.</b>
-        </p>
-        <p>
-            If you <b>don't know</b> a location, you can learn about it by clicking the blue link.
-            The Wikipedia article associated with the concept will open in a separate window.
+            <b>You must rate your familiarity for every location.</b>
         </p>
         <p>
             <g:submitButton name="continue" value="continue" class="myButton" title="continue"/>

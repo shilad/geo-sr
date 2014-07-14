@@ -3,18 +3,17 @@
 <head>
     <meta name="layout" content="main"/>
     <r:require modules="core" />
-    <title>Geographic relatedness survey: Concept relatedness, page ${page + 1} of 4</title>
+    <title>Geographic relatedness survey: Concept relatedness, page ${page + 3} of 15</title>
 
 </head>
 <body>
 <div class="rounded-corners rating" id="main-container">
-    <h1>Rate concept relatedness (page ${page + 1} of 4)</h1>
+    <h1>Rate concept relatedness (page ${page + 3} of 15)</h1>
     <div id="instructions">
         Please rate how related each pair of concepts is.
         When you finish rating all pairs, click "next".<br/><br/>
     </div>
     <g:form action="save" name="rating-form" method="post" params="${[page: page]}">
-        <div id="dontknow">I don't know<br/>this term</div>
         <div id="ratings">
             <g:each status="i" in="${questions}" var="q">
                 <div class="row ${ (i % 2) == 0 ? 'odd' : 'even'} num${i}" id="${q.questionNumber}" >
@@ -22,13 +21,7 @@
                         <tbody>
                         <tr class="first">
                             <td class="interest" colspan="2">
-                                ${q.location1}
-                            </td>
-                            <td class="checkbox">
-                                <input type="checkbox"
-                                       name="unknown_${q.id}_${q.location1.hashCode().abs()}"
-                                       class="checks" value="${q.location1.hashCode().abs()}"
-                                       <g:if test="${q.location1Known == Boolean.FALSE}">checked</g:if> >
+                                <a href="http://en.wikipedia.org/wiki/${q.location1.replaceAll(' ', '_').encodeAsURL()}" target="_blank">${q.location1}</a>
                             </td>
                             <td rowspan="2">
                                 <div class="rounded-corners rating-bars">
@@ -67,15 +60,7 @@
                         </tr>
                         <tr class="second">
                             <td class="interest" colspan="2">
-                                ${q.location2}
-                            </td>
-                            <td class="checkbox">
-                                <input type="checkbox"
-                                       name="unknown_${q.id}_${q.location2.hashCode().abs()}"
-                                       class="checks"
-                                       id="${q.location2.hashCode().abs()}"
-                                       value="${q.location2.hashCode().abs()}"
-                                       <g:if test="${q.location2Known == Boolean.FALSE}">checked</g:if> >
+                                <a href="http://en.wikipedia.org/wiki/${q.location2.replaceAll(' ', '_').encodeAsURL()}" target="_blank">${q.location2}</a>
                             </td>
                         </tr>
                         </tbody>
@@ -107,8 +92,6 @@
                     qid,
                     $(interests[0]).text(),
                     $(interests[1]).text(),
-                    $(checkboxes.get(0)).prop('checked'),
-                    $(checkboxes.get(1)).prop('checked'),
                     rating
             );
         }, 200);
@@ -120,7 +103,7 @@
             var isComplete = true;
             $("div.row").each(function () {
                 //console.log($(this).find('input:checked'));
-                if ($(this).find("input:checked").length == 0) {
+                if ($(this).find("input[type='radio']:checked").length == 0) {
                     $(this).addClass("error");
                     isComplete = false;
                 }
@@ -130,21 +113,12 @@
             }
             return isComplete;
         });
-        $("input[type='checkbox']").click(function () {
-            var $this = $(this);
-            if ($this.is(':checked')) {
-                var row = $this.parents(".row");
-                row.removeClass("error");
-                row.find("input[type=radio]").prop('checked', false);
-                logRating(row);
-            }
-        });
+
         $("input[type='radio']").click(function () {
             var $this = $(this);
             if ($this.is(':checked')) {
                 var row = $this.parents(".row");
                 row.removeClass("error");
-                row.find("input[type=checkbox]").prop('checked', false);
                 logRating(row);
             }
         });

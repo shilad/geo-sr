@@ -11,7 +11,7 @@ class LoggingController {
 
     def append() {
         Person p = personService.getForSession(session)
-        loggingService.append(p, request, params.message)
+        loggingService.append(p, request, ((String)params.message))
         render('okay')
     }
 }

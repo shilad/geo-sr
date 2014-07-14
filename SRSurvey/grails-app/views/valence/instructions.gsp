@@ -22,17 +22,13 @@
             In the next section you'll rate <b>your agreement</b> with the following statement about each location:
         </p>
         <p>
-            <br/><b style="font-size: 1.2em">I would like to live in / near this location.</b>
+            <b style="font-size: 1.1em">I would like to live in / near this location.</b>
         </p>
         <p>
             <br/><r:img uri="/images/rate_valence.png"/>
         </p>
         <p>
             You must rate your agreement with the statement for every location.
-        </p>
-        <p>
-            If you <b>don't know</b> a location, you can learn about it by clicking the blue link.
-            The Wikipedia article associated with the concept will open in a separate window.
         </p>
         <p>
             <g:submitButton name="continue" value="continue" class="myButton" title="continue"/>

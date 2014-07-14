@@ -21,7 +21,7 @@
     <g:form controller="demographic" action="saveHomes" method="post">
 
     <div class="question">
-        <div class="prompt">Please list all the places (i.e. cities) in <b>${country}</b> you've lived for <b>at least a month:</b></div>
+        <div class="prompt">Please list all the cities and towns in <b>${country}</b> you've lived for <b>at least a month:</b></div>
         <div id="city-list" class="response">
             <div class="city template">
                 <r:img uri="/images/cancel.gif"/>&nbsp;<span>Fake, Fake</span>
