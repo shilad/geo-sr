@@ -42,7 +42,7 @@ class CityService {
         cityPopulations = new HashMap<String, Double>();
         cityGeometries = new HashMap<String, Geometry>();
         // all cities with population 1K+
-        Scanner scanner = new Scanner(new File("dat/cities1000.txt"));
+        Scanner scanner = new Scanner(new File("cities1000.txt"));
 
         // country matching
         String[] array2 = ["United States of America", "Canada", "Brazil", "Pakistan", "India", "France", "Spain", "United Kingdom", "Australia"]
