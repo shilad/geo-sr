@@ -261,7 +261,7 @@ public class ExportEnhancer {
 
         Set<String> written = new HashSet<String>();
         Writer writer = WpIOUtils.openWriter(familiarityFile);
-        writer.write("worker\tlocation\tlocationId\familiarity\tvalence\tview-rank\tkms\tgraph\n");
+        writer.write("worker\tlocation\tlocationId\tfamiliarity\tvalence\tview-rank\tkms\tgraph\n");
         while (true) {
             String line = reader.readLine();
             if (line == null) {
