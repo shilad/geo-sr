@@ -290,7 +290,7 @@ public class ExportEnhancer {
                 double minKms = Double.POSITIVE_INFINITY;
                 double minGraph = Double.POSITIVE_INFINITY;
                 for (Geometry geo : homes.get(workerId)) {
-                    minKms = Math.min(minKms, geoMetric.distance(geo, locationGeo));
+                    minKms = Math.min(minKms, geoMetric.distance(geo, locationGeo) / 1000.0);
                     minGraph = Math.min(minKms, graphMetric.distance(geo, locationGeo));
                 }
                 Object [] output = new Object[] {
@@ -304,6 +304,9 @@ public class ExportEnhancer {
                         minGraph,
                 };
                 for (Object o : output) {
+                    if (o instanceof  Double && ((Double)o == Double.POSITIVE_INFINITY || (Double)o == Double.MAX_VALUE)) {
+                        o = "inf";
+                    }
                     if (o != output[0]) {
                         writer.write('\t');
                     }
