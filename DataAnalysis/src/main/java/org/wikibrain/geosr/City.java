@@ -57,4 +57,15 @@ public class City {
         result = 31 * result + state.hashCode();
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "City{" +
+                "name='" + name + '\'' +
+                ", state=" + state.getName() +
+                ", country=" + state.getCountry().getName() +
+                ", location=" + location +
+                ", population=" + population +
+                '}';
+    }
 }

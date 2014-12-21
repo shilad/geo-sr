@@ -62,12 +62,17 @@ public class CityDb {
                 Integer id = Integer.parseInt(array[0]);
                 City city = new City(name, state, location, pop);
 
-                String key = country.getCode() + "," + state.getCode() + "," + name;
+                String key = country.getName() + "," + state.getName() + "," + name;
 
                 cities.put(key, city);
             }
         }
         scan.close();
+    }
+
+    public City getByName(String countryName, String stateName, String cityName) {
+        String key = countryName + "," + stateName + "," + cityName;
+        return cities.get(key);
     }
 
     public static void main(String args[]) throws FileNotFoundException {
