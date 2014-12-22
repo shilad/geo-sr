@@ -1,5 +1,8 @@
 package org.wikibrain.geosr;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -17,6 +20,9 @@ public class Person {
     public Set<City> cities;        // Homes that are specific to cities
     public Set<Country> countries;  // Homes that are unknown cities
 
+    // page -> metric -> distance
+    public Map<PageInfo, Map<String, Double>> distances = new HashMap<PageInfo, Map<String, Double>>();
+
     @Override
     public String toString() {
         return "Person{" +
@@ -31,5 +37,12 @@ public class Person {
                 ", countries=" + countries +
                 ", cities=" + cities +
                 '}';
+    }
+
+    public synchronized void addDistance(PageInfo p, String metric, double distance) {
+        if (!distances.containsKey(p)) {
+            distances.put(p, new HashMap<String, Double>());
+        }
+        distances.get(p).put(metric, distance);
     }
 }

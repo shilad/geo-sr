@@ -1,6 +1,7 @@
 package org.wikibrain.geosr;
 
 import com.vividsolutions.jts.geom.*;
+import org.wikibrain.spatial.util.WikiBrainSpatialUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -58,7 +59,7 @@ public class CityDb {
                 Double lat = Double.parseDouble(array[4]);
                 Double longitude = Double.parseDouble(array[5]);
                 Integer pop = Integer.parseInt(array[14]);
-                Point location = Utils.makePoint(lat, longitude);
+                Point location = WikiBrainSpatialUtils.getPoint(lat, longitude);
                 Integer id = Integer.parseInt(array[0]);
                 City city = new City(name, state, location, pop);
 

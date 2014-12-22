@@ -8,6 +8,7 @@ import org.supercsv.prefs.CsvPreference;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -73,6 +74,18 @@ public class PersonDb {
 
         LOG.info("read " + byGrailsId.size() + " people");
 
+    }
+
+    public Collection<Person> getPeople() {
+        return byAmazonId.values();
+    }
+
+    public Person getByGrailsId(int id) {
+        return byGrailsId.get(id);
+    }
+
+    public Person getByAmazonId(String id) {
+        return byAmazonId.get(id);
     }
 
     public static void main(String args[]) throws IOException {

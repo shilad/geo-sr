@@ -1,5 +1,8 @@
 package org.wikibrain.geosr;
 
+import gnu.trove.set.TIntSet;
+import gnu.trove.set.hash.TIntHashSet;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -40,6 +43,22 @@ public class PageInfoDb {
         }
         scanner.close();
         LOG.info("read " + byId.size() + " pages");
+    }
+
+    public PageInfo getByTitle(String title) {
+        return byTitle.get(title);
+    }
+
+    public PageInfo getById(int id) {
+        return byId.get(id);
+    }
+
+    public TIntSet getIds() {
+        TIntSet ids = new TIntHashSet();
+        for (int id : byId.keySet()) {
+            ids.add(id);
+        }
+        return ids;
     }
 
     private void readScales() throws FileNotFoundException {
