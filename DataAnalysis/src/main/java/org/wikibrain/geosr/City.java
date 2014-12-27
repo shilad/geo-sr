@@ -5,17 +5,19 @@ import com.vividsolutions.jts.geom.Point;
 /**
  * @author Shilad Sen
  */
-public class City {
+public class City implements Identifiable {
     private String name;
     private State state;
     private Point location;
     private int population;
+    private int id;
 
-    public City(String name, State state, Point location, int population) {
+    public City(String name, State state, Point location, int population, int id) {
         this.name = name;
         this.state = state;
         this.location = location;
         this.population = population;
+        this.id = id;
     }
 
     public String getName() {
@@ -67,5 +69,10 @@ public class City {
                 ", location=" + location +
                 ", population=" + population +
                 '}';
+    }
+
+    @Override
+    public int getId() {
+        return id;
     }
 }

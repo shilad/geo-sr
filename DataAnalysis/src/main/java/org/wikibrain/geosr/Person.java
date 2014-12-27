@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * @author Shilad Sen
  */
-public class Person {
+public class Person implements Identifiable {
     public int grailsId;
     public String amazonId;
     public String gender;
@@ -44,5 +44,10 @@ public class Person {
             distances.put(p, new HashMap<String, Double>());
         }
         distances.get(p).put(metric, distance);
+    }
+
+    @Override
+    public int getId() {
+        return grailsId;
     }
 }

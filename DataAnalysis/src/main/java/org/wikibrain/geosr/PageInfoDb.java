@@ -1,14 +1,14 @@
 package org.wikibrain.geosr;
 
+import com.vividsolutions.jts.geom.Geometry;
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
+import org.wikibrain.core.dao.DaoException;
+import org.wikibrain.spatial.dao.SpatialDataDao;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.util.*;
 import java.util.logging.Logger;
 
 /**
@@ -17,15 +17,17 @@ import java.util.logging.Logger;
 public class PageInfoDb {
     private static final Logger LOG = Logger.getLogger(PageInfoDb.class.getCanonicalName());
 
-    private Map<String, PageInfo> byTitle = new HashMap<String, PageInfo>();
-    private Map<Integer, PageInfo> byId = new HashMap<Integer, PageInfo>();
+    private final Map<String, PageInfo> byTitle = new HashMap<String, PageInfo>();
+    private final Map<Integer, PageInfo> byId = new HashMap<Integer, PageInfo>();
+    private final SpatialDataDao dao;
 
-    public PageInfoDb() throws FileNotFoundException {
+    public PageInfoDb(SpatialDataDao dao) throws FileNotFoundException, DaoException {
+        this.dao = dao;
         readPopularity();
         readScales();
     }
 
-    private void readPopularity() throws FileNotFoundException {
+    private void readPopularity() throws FileNotFoundException, DaoException {
         File file = new File("dat/pagePopularity.txt");
         Scanner scanner = new Scanner(file);
         int rank = 0;
@@ -38,11 +40,21 @@ public class PageInfoDb {
             pi.id = id;
             pi.title = name;
             pi.viewRank = rank++;
+            Geometry g = dao.getGeometry(pi.id, "wikidata");
+            if (g == null) {
+                LOG.info("missing geometry for " + pi.title + " (id " + pi.id + ")");
+            } else {
+                pi.point = dao.getGeometry(pi.id, "wikidata").getCentroid();
+            }
             byId.put(id, pi);
             byTitle.put(name, pi);
         }
         scanner.close();
         LOG.info("read " + byId.size() + " pages");
+    }
+
+    public Collection<PageInfo> getPages() {
+        return byId.values();
     }
 
     public PageInfo getByTitle(String title) {
@@ -81,9 +93,5 @@ public class PageInfoDb {
             }
         }
         LOG.info("added scale to " + numMatches + " pages");
-    }
-
-    public static void main(String args[]) throws FileNotFoundException {
-        PageInfoDb db = new PageInfoDb();
     }
 }

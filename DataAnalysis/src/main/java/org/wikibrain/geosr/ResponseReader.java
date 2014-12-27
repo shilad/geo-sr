@@ -20,10 +20,6 @@ public class ResponseReader {
     private final PersonDb personDb;
     private final PageInfoDb pageDb;
 
-    public ResponseReader() throws IOException {
-        this(new PageInfoDb(), new PersonDb());
-    }
-
     public ResponseReader(PageInfoDb pageDb, PersonDb personDb) {
         this.pageDb = pageDb;
         this.personDb = personDb;
@@ -62,10 +58,5 @@ public class ResponseReader {
         LOG.info("read " + result.size() + " responses");
 
         return result;
-    }
-
-    public static void main(String args[]) throws IOException {
-        ResponseReader rr = new ResponseReader();
-        rr.read(new File("dat/questions.tsv"));
     }
 }

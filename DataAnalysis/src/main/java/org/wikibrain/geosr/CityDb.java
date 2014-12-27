@@ -61,7 +61,7 @@ public class CityDb {
                 Integer pop = Integer.parseInt(array[14]);
                 Point location = WikiBrainSpatialUtils.getPoint(lat, longitude);
                 Integer id = Integer.parseInt(array[0]);
-                City city = new City(name, state, location, pop);
+                City city = new City(name, state, location, pop, id);
 
                 String key = country.getName() + "," + state.getName() + "," + name;
 
