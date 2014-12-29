@@ -19,6 +19,7 @@ public class PageInfo implements Identifiable {
     public int viewRank;
     public int scale;
     public Point point;
+    public String instanceOf;
 
     @Override
     public int getId() {

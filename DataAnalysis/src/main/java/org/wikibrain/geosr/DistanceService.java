@@ -24,8 +24,8 @@ public class DistanceService {
     private static Logger LOG = Logger.getLogger(DistanceService.class.getName());
 
     private static final File MATRIX_DIR = new File("distances");
-//    public static final String[] METRICS = new String[] {  "spherical", "geodetic", "countries", "states", "graph" };
-    public static final String[] METRICS = new String[] {  "graph" };
+    public static final String[] METRICS = new String[] {  "spherical", "geodetic", "countries", "states", "graph" };
+//    public static final String[] METRICS = new String[] {  "graph" };
 
     private static final int NUM_POINTS = 3000;
     private final GeoEnv env;
@@ -50,10 +50,10 @@ public class DistanceService {
             if (!f1.isFile() || !f2.isFile()) {
                 return false;
             }
-            LOG.info("reading people matrix for " + metric);
+            LOG.info("reading people matrix for " + metric + " from " + f1);
             peopleDistances.put(metric, new DistanceMatrix());
             peopleDistances.get(metric).read(f1);
-            LOG.info("reading page matrix for " + metric);
+            LOG.info("reading page matrix for " + metric + " from " + f2);
             pageDistances.put(metric, new DistanceMatrix());
             pageDistances.get(metric).read(f2);
         }
@@ -99,6 +99,10 @@ public class DistanceService {
         return peopleDistances.get(metric).getDistance(person, page);
     }
 
+    public double getDistance(PageInfo page1, PageInfo page2, String metric) {
+        return pageDistances.get(metric).getDistance(page1, page2);
+    }
+
     public DistanceMatrix buildPageMatrix(final SpatialDistanceMetric metric) {
         final DistanceMatrix matrix = new DistanceMatrix();
         ParallelForEach.loop(env.pageDb.getPages(), WpThreadUtils.getMaxThreads(), new Procedure<PageInfo>() {
@@ -107,7 +111,7 @@ public class DistanceService {
                 try {
                     TIntFloatMap results = new TIntFloatHashMap();
                     for (SpatialDistanceMetric.Neighbor n : metric.getNeighbors(p.point, NUM_POINTS)) {
-                        results.put(n.conceptId, n.conceptId);
+                        results.put(n.conceptId, (float) n.distance);
                     }
                     synchronized (matrix) {
                         matrix.setDistances(p, results);
@@ -136,7 +140,7 @@ public class DistanceService {
                 try {
                     TIntFloatMap results = new TIntFloatHashMap();
                     for (SpatialDistanceMetric.Neighbor n : metric.getNeighbors(c.getLocation(), NUM_POINTS)) {
-                        results.put(n.conceptId, n.conceptId);
+                        results.put(n.conceptId, (float) n.distance);
                     }
                     synchronized (distances) {
                         distances.put(c.getId(), results);

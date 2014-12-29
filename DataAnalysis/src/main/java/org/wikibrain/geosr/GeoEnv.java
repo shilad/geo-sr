@@ -5,6 +5,7 @@ import org.wikibrain.core.cmd.Env;
 import org.wikibrain.core.cmd.EnvBuilder;
 import org.wikibrain.core.dao.DaoException;
 import org.wikibrain.spatial.dao.SpatialDataDao;
+import org.wikibrain.wikidata.WikidataDao;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -29,7 +30,7 @@ public class GeoEnv {
         this.dao = env.getConfigurator().get(SpatialDataDao.class);
         cityDb = new CityDb();
         personDb = new PersonDb();
-        pageDb = new PageInfoDb(dao);
+        pageDb = new PageInfoDb(dao, env.getConfigurator().get(WikidataDao.class));
         distances = new DistanceService(this);
     }
 }
