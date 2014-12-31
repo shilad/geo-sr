@@ -1,0 +1,15 @@
+architectural structure
+international airport
+World Heritage Site
+constructed structure
+geographical object
+geographic region
+building
+protected area
+stadium
+census-designated place
+television series
+Grade I listed structure
+upper chamber
+geographic location
+instanceOf

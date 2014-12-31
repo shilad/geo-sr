@@ -1,5 +1,6 @@
 package org.wikibrain.geosr;
 
+import org.apache.commons.lang3.StringUtils;
 import org.wikibrain.conf.ConfigurationException;
 import org.wikibrain.core.dao.DaoException;
 import org.wikibrain.utils.WpIOUtils;
@@ -31,7 +32,7 @@ public class ExportLocations {
         BufferedWriter writer = WpIOUtils.openWriter(familiarityFile);
 
         List<String> cols = new ArrayList<String>();
-        cols.addAll(Arrays.asList("person", "location", "locationId", "instanceOf", "familiarity", "valence", "popRank"));
+        cols.addAll(Arrays.asList("person", "location", "locationId", "instanceOf", "instanceOfRaw", "familiarity", "valence", "popRank"));
         cols.addAll(Arrays.asList(DistanceService.METRICS));
         writeRow(writer, cols);
 
@@ -46,6 +47,7 @@ public class ExportLocations {
                 row.add(r.getPage1().getTitle());
                 row.add(r.getPage1().getId());
                 row.add(r.getPage1().instanceOf);
+                row.add(StringUtils.join(r.getPage1().rawInstanceOfNames, "|"));
                 row.add(r.getFamiliarity1());
                 row.add(r.getValence1());
                 row.add(r.getPage1().getViewRank());
@@ -61,6 +63,7 @@ public class ExportLocations {
                 row.add(r.getPage2().getTitle());
                 row.add(r.getPage2().getId());
                 row.add(r.getPage2().instanceOf);
+                row.add(StringUtils.join(r.getPage2().rawInstanceOfNames, "|"));
                 row.add(r.getFamiliarity2());
                 row.add(r.getValence2());
                 row.add(r.getPage2().getViewRank());

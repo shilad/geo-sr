@@ -2,6 +2,9 @@ package org.wikibrain.geosr;
 
 import com.vividsolutions.jts.geom.Point;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Shilad Sen
  */
@@ -19,7 +22,10 @@ public class PageInfo implements Identifiable {
     public int viewRank;
     public int scale;
     public Point point;
+
     public String instanceOf;
+    public List<String> rawInstanceOfNames = new ArrayList<String>();
+    public List<Integer> rawInstanceOfIds = new ArrayList<Integer>();
 
     @Override
     public int getId() {

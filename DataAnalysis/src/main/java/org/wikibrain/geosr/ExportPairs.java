@@ -37,12 +37,14 @@ public class ExportPairs {
 
         List<String> cols = new ArrayList<String>();
         cols.addAll(Arrays.asList("person",
-                "location1", "locationId1", "location2", "locationId2",
+                "location1", "locationId1", "location1Class",
+                "location2", "locationId2", "location2Class",
                 "familiarity1", "familiarity2", "valence1", "valence2", "relatedness",
                 "popRank1", "popRank2"
         ));
         cols.addAll(Arrays.asList(DistanceService.METRICS));
         cols.add("sr");
+        cols.add("typeSr");
         writeRow(writer, cols);
 
         ParallelForEach.loop(responses, new Procedure<Response>() {
@@ -53,18 +55,26 @@ public class ExportPairs {
                 row.add(r.getGrailsId());
                 row.add(r.getPage1().getTitle());
                 row.add(r.getPage1().getId());
+                row.add(r.getPage1().instanceOf);
                 row.add(r.getPage2().getTitle());
-                row.add(r.getPage2().getId());
+                row.add(r.getPage2().getId());;
+                row.add(r.getPage2().instanceOf);
                 row.add(r.getFamiliarity1());;
                 row.add(r.getFamiliarity2());
                 row.add(r.getValence1());
                 row.add(r.getValence2());
+                row.add(r.getRelatedness());
                 row.add(r.getPage1().getViewRank());
                 row.add(r.getPage2().getViewRank());
                 for (String m : DistanceService.METRICS) {
                     row.add(env.distances.getDistance(r.getPerson(), r.getPage1(), m));
                 }
                 SRResult result = metric.similarity(r.getPage1().getId(), r.getPage2().getId(), false);
+                row.add(result == null ? Double.NaN : result.getScore());
+                result = null;
+                if (r.getPage1().instanceOf != null && r.getPage2().instanceOf != null) {
+                    result = metric.similarity(r.getPage1().instanceOf, r.getPage2().instanceOf, false);
+                }
                 row.add(result == null ? Double.NaN : result.getScore());
                 synchronized (writer) {
                     writeRow(writer, row);
@@ -81,7 +91,10 @@ public class ExportPairs {
                 o = ((Float)o).doubleValue();
             }
             if (o instanceof Double) {
-                o = String.format("%.3f", (Double)o);
+                o = String.format("%.3f", (Double) o);
+            }
+            if (o == null) {
+                o = "null";
             }
             if (i++ > 0) writer.write("\t");
             writer.write(o.toString());

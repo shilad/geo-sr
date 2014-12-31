@@ -3,7 +3,7 @@ package org.wikibrain.geosr;
 import com.vividsolutions.jts.geom.Geometry;
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-import org.apache.commons.lang3.StringUtils;
+import org.wikibrain.conf.ConfigurationException;
 import org.wikibrain.core.dao.DaoException;
 import org.wikibrain.core.lang.Language;
 import org.wikibrain.spatial.dao.SpatialDataDao;
@@ -26,11 +26,17 @@ public class PageInfoDb {
     private final SpatialDataDao dao;
     private final WikidataDao wikidataDao;
 
-    public PageInfoDb(SpatialDataDao dao, WikidataDao wikidataDao) throws FileNotFoundException, DaoException {
+    public PageInfoDb(SpatialDataDao dao, WikidataDao wikidataDao) throws FileNotFoundException, DaoException, ConfigurationException {
         this.dao = dao;
         this.wikidataDao = wikidataDao;
         readPopularity();
         readScales();
+
+        InstanceOfAnalyzer analyzer = new InstanceOfAnalyzer(wikidataDao);
+        analyzer.analyze(byId.values());
+        for (PageInfo pi : byId.values()) {
+            pi.instanceOf = analyzer.getBest(pi);
+        }
     }
 
     private void readPopularity() throws FileNotFoundException, DaoException {
@@ -51,7 +57,7 @@ public class PageInfoDb {
                 LOG.info("missing geometry for " + pi.title + " (id " + pi.id + ")");
             } else {
                 pi.point = g.getCentroid();
-                pi.instanceOf = getInstanceOf(pi.id);
+                getInstanceOf(pi);
 //                System.err.format("%s is %s\n", pi.getTitle(), pi.instanceOf);
 
             }
@@ -63,10 +69,10 @@ public class PageInfoDb {
     }
 
     Map<Integer, String> instanceNames = new ConcurrentHashMap<Integer, String>();
-    private String getInstanceOf(int conceptId) throws DaoException {
+    private void getInstanceOf(PageInfo pi) throws DaoException {
         WikidataFilter filter = new WikidataFilter.Builder()
                 .withEntityType(WikidataEntity.Type.ITEM)
-                .withEntityId(conceptId)
+                .withEntityId(pi.id)
                 .withPropertyId(31)
                 .build();
 
@@ -77,11 +83,11 @@ public class PageInfoDb {
                 this.instanceNames.put(itemId, wikidataDao.getLabel(Language.EN, WikidataEntity.Type.ITEM, itemId));
             }
             String n = this.instanceNames.get(itemId);
-            if (n != null && !n.equals("unknown")) {
-                instanceNames.add(n);
+            if (n != null && !n.equals("unknown") && !n.trim().isEmpty()) {
+                pi.rawInstanceOfNames.add(n);
+                pi.rawInstanceOfIds.add(itemId);
             }
         }
-        return StringUtils.join(instanceNames, "|");
     }
 
     public Collection<PageInfo> getPages() {
