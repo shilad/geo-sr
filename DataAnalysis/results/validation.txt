@@ -1,8 +1,10 @@
-('Great Britain', 'United Kingdom') [959, 35]
-('Florida', 'Hong Kong') [967, 26]
-('Bermuda Triangle', 'Minnesota') [955, 39]
-913 got 3 right and 0 wrong
-18 got 1 right and 2 wrong
-1 got 0 right and 3 wrong
-61 got 2 right and 1 wrong
-1 got 2 right and 0 wrong
+for pair Great Britain, United Kingdom, 959 people were correct and 35 were incorrect
+for pair Florida, Hong Kong, 967 people were correct and 26 were incorrect
+for pair Bermuda Triangle, Minnesota, 955 people were correct and 39 were incorrect
+
+
+913 people got 3  validation questions correct and 0 wrong
+61 people got 2  validation questions correct and 1 wrong
+18 people got 1  validation questions correct and 2 wrong
+1 people got 2  validation questions correct and 0 wrong
+1 people got 0  validation questions correct and 3 wrong

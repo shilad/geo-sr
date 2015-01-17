@@ -12,6 +12,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 /**
@@ -67,20 +68,34 @@ public class ExportPairs {
                 row.add(r.getPage1().getViewRank());
                 row.add(r.getPage2().getViewRank());
                 for (String m : DistanceService.METRICS) {
-                    row.add(env.distances.getDistance(r.getPerson(), r.getPage1(), m));
+                    row.add(env.distances.getDistance(r.getPage1(), r.getPage2(), m));
                 }
-                SRResult result = metric.similarity(r.getPage1().getId(), r.getPage2().getId(), false);
-                row.add(result == null ? Double.NaN : result.getScore());
-                result = null;
-                if (r.getPage1().instanceOf != null && r.getPage2().instanceOf != null) {
-                    result = metric.similarity(r.getPage1().instanceOf, r.getPage2().instanceOf, false);
-                }
-                row.add(result == null ? Double.NaN : result.getScore());
+                row.add(getSimilarity(r.getPage1().getTitle(), r.getPage2().getTitle()));
+                row.add(getSimilarity(r.getPage1().instanceOf, r.getPage2().instanceOf));
                 synchronized (writer) {
                     writeRow(writer, row);
                 }
             }
         });
+    }
+
+    private Map<String, Double> sr = new ConcurrentHashMap<String, Double>();
+    private double getSimilarity(String s1, String s2) throws DaoException {
+        if (s1 == null || s2 == null) {
+            return Double.NaN;
+        }
+        if (s1.compareTo(s2) > 0) {
+            String t = s1;
+            s1 = s2;
+            s2 = t;
+        }
+        String key = s1 + "," + s2;
+        if (sr.containsKey(key)) {
+            return sr.get(key);
+        }
+        SRResult r = metric.similarity(s1, s2, false);
+        sr.put(key, r == null ? Double.NaN : r.getScore());
+        return sr.get(key);
     }
 
 
