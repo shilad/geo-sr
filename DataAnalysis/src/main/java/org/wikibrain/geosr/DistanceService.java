@@ -24,7 +24,7 @@ public class DistanceService {
     private static Logger LOG = Logger.getLogger(DistanceService.class.getName());
 
     private static final File MATRIX_DIR = new File("distances");
-    public static final String[] METRICS = new String[] {  "spherical", "geodetic", "countries", "states", "graph" };
+    public static final String[] METRICS = new String[] {  "spherical", "geodetic", "countries", "states", "graph", "ordinal" };
 //    public static final String[] METRICS = new String[] {  "graph" };
 
     private static final int NUM_POINTS = 3000;
@@ -62,6 +62,12 @@ public class DistanceService {
 
     public void rebuild() throws DaoException, IOException {
         TIntSet concepts = env.pageDb.getIds();
+
+        // Spherical with all points
+        SphericalDistanceMetric allSpherical = new SphericalDistanceMetric(env.dao);
+        allSpherical.enableCache(true);
+
+        // Spherical with our concept points
         SphericalDistanceMetric spherical = new SphericalDistanceMetric(env.dao);
         spherical.setValidConcepts(concepts);
         spherical.enableCache(true);
@@ -79,9 +85,12 @@ public class DistanceService {
         stateMetric.setMaxSteps(50);
         metrics.put("states", stateMetric);
 
-        GraphDistanceMetric graphMetric = new GraphDistanceMetric(env.dao);
+        GraphDistanceMetric graphMetric = new GraphDistanceMetric(env.dao, allSpherical);
         graphMetric.setMaxDistance(50);
         metrics.put("graph", graphMetric);
+
+        OrdinalDistanceMetric ordinalMetric = new OrdinalDistanceMetric(env.dao, allSpherical);
+        metrics.put("ordinal", ordinalMetric);
 
         for (String m : METRICS) {
             metrics.get(m).setValidConcepts(concepts);

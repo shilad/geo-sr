@@ -20,6 +20,7 @@ public class GeoEnv {
     public PersonDb personDb;
     public PageInfoDb pageDb;
     public DistanceService distances;
+    public ScaleAwareContains scaleAwareContains;
 
     public GeoEnv(String args[]) throws ConfigurationException, IOException, DaoException {
         this(EnvBuilder.envFromArgs(args));
@@ -32,5 +33,6 @@ public class GeoEnv {
         personDb = new PersonDb();
         pageDb = new PageInfoDb(dao, env.getConfigurator().get(WikidataDao.class));
         distances = new DistanceService(this);
+        scaleAwareContains = new ScaleAwareContains(dao);
     }
 }

@@ -46,6 +46,7 @@ public class ExportPairs {
         cols.addAll(Arrays.asList(DistanceService.METRICS));
         cols.add("sr");
         cols.add("typeSr");
+        cols.add("containsCategory");
         writeRow(writer, cols);
 
         ParallelForEach.loop(responses, new Procedure<Response>() {
@@ -72,6 +73,9 @@ public class ExportPairs {
                 }
                 row.add(getSimilarity(r.getPage1().getTitle(), r.getPage2().getTitle()));
                 row.add(getSimilarity(r.getPage1().instanceOf, r.getPage2().instanceOf));
+                row.add(env.scaleAwareContains.getCategory(
+                            r.getPage1().getId(),
+                            r.getPage2().getId()));
                 synchronized (writer) {
                     writeRow(writer, row);
                 }
