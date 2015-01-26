@@ -1,4 +1,5 @@
 import csv
+import math
 import collections
 
 from utils import *
@@ -26,9 +27,11 @@ FLOAT_FIELDS = [
     'geodetic',
     'countries',
     'states',
-    'graph',
+    'graph25',
+    'graph100',
     'sr',
     'typeSr',
+    'popDiff',
 ]
 
 
@@ -54,7 +57,10 @@ class PairDb:
         f = open(DAT + '/pair-responses.tsv', 'r')
         responses = []
         for r in csv.DictReader(f, delimiter='\t'):
-            responses.append(Pair(r))
+            try:
+                responses.append(Pair(r))
+            except:
+                warn('invalid pair line: %s' % `r`)
         f.close()
         warn('read %d pair assessment' % (len(responses)))
         return responses
@@ -74,6 +80,22 @@ class PairDb:
                 len([u for u in validations if len(validations[u]) == len(VALIDATION_PAIRS)])))
 
         return merge_responses_by(filtered, lambda r: r.person + '@' + str(r.get_location_key()))
+
+    def aggregated(self, min_count=10, impute=True):
+        with_response = [r for r in self.responses if r.has_response()]
+        merged = merge_responses_by(with_response, lambda r: r.get_location_key())
+        pruned = [r for r in merged if r.count >= min_count]
+
+        if impute:
+            for f in 'states', 'countries', 'typeSr':
+                vals = [r.get(f) for r in merged if r.get(f) is not None]
+                imputed = mean(vals) if f == 'typeSr' else max(vals)
+                warn('imputing value of %.3f for %s' % (imputed, f))
+                for r in merged:
+                    if r.get(f) is None:
+                        setattr(r, f, imputed)
+
+        return pruned
 
     def get_users(self):
         return set([r.person for r in self.responses])
@@ -136,15 +158,16 @@ def merge_responses(responses):
 
 class Pair:
     def __init__(self, row):
+        # print row
         if 'location1Name' in row:
             swap = row['location1Name'] > row['location2Name']
         else:
             swap = row['location1'] > row['location2']
         # Set magic attributes
         for field, val in row.items():
-            if swap and '1' in field:
+            if swap and '1' in field and 'graph' not in field:
                 field = field.replace('1', '2')
-            elif swap and '2' in field:
+            elif swap and '2' in field and 'graph' not in field:
                 field = field.replace('2', '1')
 
             if field == 'location1' and type(val) == type(''):
@@ -163,6 +186,14 @@ class Pair:
                 val = None
             setattr(self, field, val)
         self.lcs = longest_common_substring(self.location1Name.lower(), self.location2Name.lower())
+        self.popDiff = abs(math.log(self.popRank1 + 1) - math.log(self.popRank2 + 1))
+
+        # Fix up ordinal
+        #if self.ordinal is None and self.spherical is not None:
+            # self.ordinal = 3000.0 + self.spherical / (3.14 * 2 * 6372800) * 1000000
+
+        if self.geodetic is None and self.spherical is not None:
+            self.geodetic = self.spherical
 
     def get_location_key(self):
         assert(self.location1Name < self.location2Name)
@@ -201,7 +232,6 @@ class Pair:
             return relatedness not in (1, 2)
         else:
             assert False
-
 
     def has_all_fields(self):
         for f in FLOAT_FIELDS:
