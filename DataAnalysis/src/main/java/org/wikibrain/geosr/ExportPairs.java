@@ -41,18 +41,26 @@ public class ExportPairs {
                 "location1", "locationId1", "location1Class",
                 "location2", "locationId2", "location2Class",
                 "familiarity1", "familiarity2", "valence1", "valence2", "relatedness",
-                "popRank1", "popRank2"
+                "popRank1", "popRank2", "lcs", "popDiff"
         ));
         cols.addAll(Arrays.asList(DistanceService.METRICS));
         cols.add("sr");
         cols.add("typeSr");
-        cols.add("containsCategory");
+        for (String cc : ContainmentClass.VALUES) {
+            cols.add("cc-" + cc);
+        }
         writeRow(writer, cols);
 
         ParallelForEach.loop(responses, new Procedure<Response>() {
             @Override
             public void call(Response r) throws Exception {
                 if (!r.getPerson().complete) return;
+
+                double lcs = Utils.longestSubstring(r.getPage1().getTitle(), r.getPage2().getTitle());
+                double popDiff = Math.abs(
+                          Math.log(r.getPage1().getViewRank() + 1)
+                        - Math.log(r.getPage2().getViewRank() + 1));
+
                 List<Object> row = new ArrayList<Object>();
                 row.add(r.getGrailsId());
                 row.add(r.getPage1().getTitle());
@@ -66,16 +74,29 @@ public class ExportPairs {
                 row.add(r.getValence1());
                 row.add(r.getValence2());
                 row.add(r.getRelatedness());
-                row.add(r.getPage1().getViewRank());
-                row.add(r.getPage2().getViewRank());
+                row.add(Math.log(1 + r.getPage1().getViewRank()));
+                row.add(Math.log(1 + r.getPage2().getViewRank()));
+                row.add(Math.log(1 + lcs));
+                row.add(popDiff);
                 for (String m : DistanceService.METRICS) {
-                    row.add(env.distances.getDistance(r.getPage1(), r.getPage2(), m));
+                    double d = env.distances.getDistance(r.getPage1(), r.getPage2(), m);
+                    row.add(Math.log(1 + d));
                 }
                 row.add(getSimilarity(r.getPage1().getTitle(), r.getPage2().getTitle()));
                 row.add(getSimilarity(r.getPage1().instanceOf, r.getPage2().instanceOf));
-                row.add(env.scaleAwareContains.getCategory(
+                String cc = env.containmentClass.getCategory(
                             r.getPage1().getId(),
-                            r.getPage2().getId()));
+                            r.getPage2().getId());
+                int matches = 0;
+                for (String val : ContainmentClass.VALUES) {
+                    if (val.equals(cc)) {
+                        matches++;
+                        row.add("1");
+                    } else {
+                        row.add("0");
+                    }
+                }
+                if (matches != 1) throw new IllegalStateException(cc);
                 synchronized (writer) {
                     writeRow(writer, row);
                 }

@@ -1,15 +1,14 @@
+import arff
+
 import collections
 from utils import *
-from pair_db import PairDb, merge_responses
+from pair_db import PairDb, CONTAINMENT_CLASSES
 
 db = PairDb()
 
 FIELDS = [
-    'location1Name',
-    'location2Name',
     'lcs',
     'spherical',
-    'relatedness',
     'geodetic',
     'countries',
     'states',
@@ -19,8 +18,7 @@ FIELDS = [
     'sr',
     'popDiff',
     'typeSr',
-    'containsCategory',
-]
+] + CONTAINMENT_CLASSES + ['relatedness']
 
 
 responses = db.aggregated()
@@ -33,6 +31,5 @@ for q in responses:
         row.append(q.get(f))
     X.append(row)
 
-import arff
 arff.dump(DAT + '/aggregated.arff', X, relation="aggregated-pairs", names=FIELDS)
 

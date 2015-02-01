@@ -22,6 +22,7 @@ METRICS = [
     'graph25',
     'graph100',
     'popDiff',
+    'ordinal',
     'sr',
     'typeSr',
 ]

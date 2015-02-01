@@ -1,0 +1,754 @@
+Colorado	Hartsfield–Jackson Atlanta International Airport	1.0
+Camden, New Jersey	Grand Canyon	1.0
+Oman	Sri Lanka	1.1
+Bill Gates's house	South Australia	1.1
+Massachusetts	Orlando, Florida	1.16
+Mount Rainier	Providence, Rhode Island	1.18181818182
+Alcatraz Island	Grand Canyon	1.21428571429
+Love Canal	West Virginia	1.21428571429
+Great Plains	Long Beach, California	1.27027027027
+San Francisco Bay Area	Vancouver	1.27272727273
+Las Vegas Strip	Montana	1.28125
+Appalachian Mountains	Florida State University	1.2962962963
+Scottish Highlands	University of Chicago	1.31818181818
+Ellis Island	University of Pennsylvania	1.32142857143
+Rock and Roll Hall of Fame	Virginia Tech	1.325
+Mason–Dixon line	Princeton University	1.325
+Brooklyn Bridge	Mason–Dixon line	1.33333333333
+AT&T Stadium	Louisiana	1.33333333333
+Miami Beach, Florida	Rikers Island	1.36363636364
+Lexington, Kentucky	West Palm Beach, Florida	1.36363636364
+High Roller (Ferris wheel)	Yellowstone Caldera	1.36842105263
+Dawson's Creek	Georgia Guidestones	1.375
+Columbus, Ohio	Muscle Shoals, Alabama	1.37931034483
+Charlottesville, Virginia	Cincinnati	1.38461538462
+Dallas/Fort Worth International Airport	Jackson, Mississippi	1.38888888889
+Atlantic City, New Jersey	University of Pennsylvania	1.38888888889
+Alcatraz Island	Tijuana	1.39393939394
+Missouri	Punjab, India	1.4
+Charlottesville, Virginia	Detroit	1.40243902439
+AT&T Stadium	Mexico	1.40384615385
+University of Notre Dame	Willis Tower	1.41304347826
+Michigan State University	West Virginia	1.41379310345
+Rock and Roll Hall of Fame	University of Notre Dame	1.41428571429
+Cheyenne, Wyoming	Santa Fe, New Mexico	1.41666666667
+Brigham Young University	Hoover Dam	1.41935483871
+Massachusetts	Nova Scotia	1.42307692308
+Hartsfield–Jackson Atlanta International Airport	Indianapolis Motor Speedway	1.45454545455
+Grand Canyon	Tijuana	1.47368421053
+Rikers Island	Worcester, Massachusetts	1.48
+Harvard University	Montréal–Pierre Elliott Trudeau International Airport	1.48214285714
+Ellis Island	Mason–Dixon line	1.5
+ADX Florence	Colorado	1.5
+Knoxville, Tennessee	University of Notre Dame	1.5
+Mason–Dixon line	Three World Trade Center	1.52941176471
+Albany, New York	Harvard College	1.53571428571
+Cleveland	Lake Michigan	1.54545454545
+Ghoramara Island	Salt Lake Stadium	1.54545454545
+Hartsfield–Jackson Atlanta International Airport	Ohio River	1.55714285714
+Purdue University	Willis Tower	1.56
+Sri Lanka	Western Ghats	1.5625
+Brooklyn Bridge	London Stock Exchange	1.5652173913
+Columbus, Ohio	Hamilton, Ontario	1.57142857143
+Mount Rushmore	Ohio River	1.578125
+Grand Rapids, Michigan	Lexington, Kentucky	1.58064516129
+Michigan	Pittsburgh	1.58108108108
+Florida	Maryland	1.58333333333
+Camden, New Jersey	Mason–Dixon line	1.58974358974
+Appalachian Mountains	Hartsfield–Jackson Atlanta International Airport	1.59210526316
+Milwaukee	Sioux Falls, South Dakota	1.59523809524
+Corpus Christi, Texas	Wichita, Kansas	1.59756097561
+Ellis Island	Miami Beach, Florida	1.6
+Las Vegas Strip	Yellowstone National Park	1.6
+Milwaukee	University of Notre Dame	1.60714285714
+Missouri	Muscle Shoals Sound Studio	1.61111111111
+San Quentin State Prison	University of Southern California	1.61363636364
+Indianapolis Motor Speedway	Wisconsin	1.61538461538
+Camden, New Jersey	SoHo, Manhattan	1.61538461538
+Des Moines, Iowa	Lake Michigan	1.61627906977
+Atlantic City, New Jersey	Mason–Dixon line	1.61842105263
+Jacksonville, Florida	Ronald Reagan Washington National Airport	1.62068965517
+Oberlin College	Rock and Roll Hall of Fame	1.62962962963
+Lake Erie	West Virginia	1.63095238095
+Ohio	Washington Dulles International Airport	1.63414634146
+Dallas/Fort Worth International Airport	Mount Rushmore	1.63636363636
+Knoxville, Tennessee	West Palm Beach, Florida	1.64285714286
+AT&T Stadium	Rio Grande	1.64285714286
+Massachusetts	Oklahoma	1.65
+Fort Wayne, Indiana	University of Michigan	1.65
+Georgia Guidestones	Virginia Tech	1.65384615385
+Detroit	Love Canal	1.65789473684
+Hamilton, Ontario	Love Canal	1.66
+Appalachian Mountains	Cincinnati	1.66
+Cleveland	Hamilton, Ontario	1.66666666667
+Montgomery, Alabama	Orlando, Florida	1.66666666667
+Montgomery, Alabama	Ohio River	1.671875
+Indore	Sri Lanka	1.68421052632
+Louisiana	Ohio River	1.68965517241
+Indianapolis	Lake Michigan	1.69047619048
+Kansas City, Missouri	Purdue University	1.69117647059
+Maryland	Princeton University	1.6935483871
+Albany, New York	Harvard University	1.69444444444
+Lexington, Kentucky	Michigan	1.69642857143
+Arkansas	Houston	1.7027027027
+Delaware	MetLife Stadium	1.7037037037
+Iowa	University of Notre Dame	1.70833333333
+Delaware	Ellis Island	1.71666666667
+Ohio River	Stone Mountain	1.71666666667
+Grand Canyon	Southern California	1.72093023256
+Princeton University	Ronald Reagan Washington National Airport	1.725
+Maryland	Monument Valley	1.72727272727
+Caesars Palace	The Forum (Inglewood)	1.72727272727
+Milwaukee	Purdue University	1.73076923077
+Chennai	Colombo	1.73333333333
+Ellis Island	Havana	1.73333333333
+Compton, California	Salton Sea	1.73913043478
+Ann Arbor, Michigan	Lexington, Kentucky	1.74418604651
+Bellevue, Washington	University of California, Davis	1.75
+Detroit	Indianapolis Motor Speedway	1.75609756098
+Aspen, Colorado	St. Louis	1.75862068966
+Hamilton, Ontario	Syracuse, New York	1.76086956522
+Hartsfield–Jackson Atlanta International Airport	Montgomery, Alabama	1.7625
+Mall of America	University of Wisconsin–Madison	1.765625
+Johns Hopkins University	Lake Erie	1.76666666667
+Cincinnati	Love Canal	1.76666666667
+Louisiana	Waco, Texas	1.76744186047
+Yale University	Yonkers, New York	1.76923076923
+Hartsfield–Jackson Atlanta International Airport	Muscle Shoals Sound Studio	1.77083333333
+Adam's Bridge	Mangalore	1.77272727273
+Appalachian Mountains	Muscle Shoals, Alabama	1.77419354839
+Bill Gates's house	Oakland, California	1.775
+Arkansas	Galveston, Texas	1.78048780488
+Detroit	University of Notre Dame	1.78205128205
+Biltmore Estate	Virginia Tech	1.78571428571
+Grand Canyon	Helena, Montana	1.78846153846
+Chattanooga, Tennessee	Purdue University	1.78846153846
+Phoenix, Arizona	Tijuana	1.79310344828
+Arkansas	Austin, Texas	1.79411764706
+CBGB	Ellis Island	1.8
+Galveston, Texas	Orlando, Florida	1.8
+Princeton University	SoHo, Manhattan	1.81818181818
+Hart Island, New York	Massachusetts	1.82258064516
+Columbus, Ohio	Mississauga	1.825
+Appalachian Mountains	Gainesville, Florida	1.83333333333
+Florida State University	Muscle Shoals Sound Studio	1.83333333333
+Grand Rapids, Michigan	Pittsburgh	1.83333333333
+Bellevue, Washington	Oakland, California	1.83333333333
+Camden, New Jersey	Maryland	1.83333333333
+Arkansas	Muscle Shoals Sound Studio	1.83333333333
+Columbus, Ohio	West Virginia	1.83720930233
+Indianapolis Motor Speedway	Milwaukee	1.8375
+Elgin, Illinois	Milwaukee	1.83823529412
+Lake Michigan	Toronto Pearson International Airport	1.84090909091
+Arizona	San Quentin State Prison	1.84090909091
+Bill Gates's house	Lombard Street (San Francisco)	1.84482758621
+Aspen, Colorado	Flagstaff, Arizona	1.84523809524
+Montgomery, Alabama	West Palm Beach, Florida	1.85227272727
+University of Notre Dame	Wisconsin	1.85365853659
+Delaware	Newark, New Jersey	1.86585365854
+Louisiana	Minnesota	1.86666666667
+Knoxville, Tennessee	Virginia	1.87037037037
+Playboy Mansion	University of Southern California	1.87142857143
+Michigan	Purdue University	1.875
+Houston	Oklahoma	1.875
+Kryptos	Washington metropolitan area	1.875
+Muscle Shoals Sound Studio	South Carolina	1.88235294118
+Louisiana	Rio Grande	1.8875
+Lake Michigan	Purdue University	1.89024390244
+Indiana	Minnesota	1.9
+Charlotte, North Carolina	Muscle Shoals Sound Studio	1.90476190476
+Galveston, Texas	Tulsa, Oklahoma	1.90540540541
+Love Canal	Toronto Pearson International Airport	1.90625
+India	Sri Lanka	1.90909090909
+Arizona	Palm Springs, California	1.92105263158
+Hartsfield–Jackson Atlanta International Airport	Orlando, Florida	1.92592592593
+Amarillo, Texas	Oklahoma City	1.93333333333
+Chattanooga, Tennessee	Muscle Shoals, Alabama	1.93421052632
+Tijuana	University of California, San Diego	1.93548387097
+Cleveland	Lexington, Kentucky	1.9375
+Salton Sea	The Forum (Inglewood)	1.9375
+Georgia (U.S. state)	West Palm Beach, Florida	1.94444444444
+Cincinnati	Nashville, Tennessee	1.94736842105
+Des Moines, Iowa	Mount Rushmore	1.94871794872
+Michigan	University of Wisconsin–Madison	1.94871794872
+Mayo Clinic	University of Texas at Austin	1.95
+Long Beach, California	Salton Sea	1.95833333333
+Madison, Wisconsin	Sioux Falls, South Dakota	1.96153846154
+Biltmore Estate	Jacksonville, Florida	1.96296296296
+Sri Lanka	Tiruchirappalli	1.96774193548
+Charlottesville, Virginia	Dayton, Ohio	1.97297297297
+Ann Arbor, Michigan	Wisconsin	1.97619047619
+Long Island	Wesleyan University	1.98648648649
+Harvard College	Providence, Rhode Island	1.9880952381
+Chicago	Minneapolis	2.0
+Indianapolis	North Dakota	2.0
+Mason–Dixon line	University of Pennsylvania	2.0
+Indiana	O'Hare International Airport	2.0
+Alcatraz Island	Johnston Atoll	2.0
+Biltmore Estate	Georgia Guidestones	2.0
+Cheyenne Mountain nuclear bunker	Great Plains	2.02173913043
+Missouri	Oklahoma City	2.025
+Indiana	Milwaukee	2.02564102564
+Bellevue, Washington	Boise, Idaho	2.02631578947
+Little Rock, Arkansas	Monterrey	2.03571428571
+Cornell University	New Haven, Connecticut	2.03703703704
+Lombard Street (San Francisco)	Stockton, California	2.03846153846
+Burbank, California	Salton Sea	2.04347826087
+Berkeley, California	San Quentin State Prison	2.04347826087
+Harvard University	Rhode Island	2.04444444444
+Hudson River	Philadelphia	2.04761904762
+Coventry	York	2.05
+Alcatraz Island	University of California, Davis	2.06097560976
+Durham, North Carolina	Knoxville, Tennessee	2.0625
+Muscle Shoals Sound Studio	Ohio River	2.07142857143
+Great Plains	Ohio River	2.07575757576
+New Haven, Connecticut	Yonkers, New York	2.07777777778
+Syracuse University	University of Toronto	2.07894736842
+Georgia (U.S. state)	Maryland	2.08
+Colombo	Kochi	2.08695652174
+Kochi	Puducherry	2.08823529412
+Colombo	Meenakshi Amman Temple	2.09090909091
+Indiana	Wisconsin	2.09259259259
+South India	Sri Lanka	2.10810810811
+Purdue University	Wisconsin	2.11111111111
+Compton, California	Tijuana	2.11842105263
+Kansas	Little Rock, Arkansas	2.11842105263
+AT&T Stadium	Ohio River	2.12068965517
+Louisiana	Oklahoma	2.12222222222
+Kodaikanal	Western Ghats	2.125
+Bhopal	Taj Mahal	2.125
+Lombard Street (San Francisco)	San Quentin State Prison	2.12857142857
+Muscle Shoals, Alabama	Tennessee	2.13888888889
+Karnataka	Padmanabhaswamy Temple	2.13888888889
+Mississippi River	Stone Mountain	2.140625
+Galveston, Texas	Jacksonville, Florida	2.14516129032
+Knoxville, Tennessee	Rock and Roll Hall of Fame	2.14634146341
+Grand Rapids, Michigan	Rock and Roll Hall of Fame	2.14634146341
+Brooklyn Bridge	Trafalgar Square	2.15217391304
+Delaware	Mason–Dixon line	2.15789473684
+Rhode Island	Salem, Massachusetts	2.15909090909
+Chesapeake Bay	Mississippi River	2.16
+Boise, Idaho	Mount St. Helens	2.1625
+Karnataka	Puducherry	2.16666666667
+Lexington, Kentucky	Montgomery, Alabama	2.17073170732
+Georgia (U.S. state)	Lexington, Kentucky	2.17073170732
+Atlantic City, New Jersey	Bell Labs	2.1724137931
+Karnataka	Western Ghats	2.175
+Hoover Dam	Southern California	2.17741935484
+Colorado	Missouri	2.17857142857
+North Dakota	Wisconsin	2.18181818182
+Bill Gates's house	Mount Rainier	2.18571428571
+Great Plains	Santa Fe, New Mexico	2.1875
+Discovery Island (Bay Lake)	Kennedy Space Center	2.19444444444
+Michigan	Rock and Roll Hall of Fame	2.19512195122
+Durham, North Carolina	Jacksonville, Florida	2.2
+Muscle Shoals Sound Studio	Purdue University	2.21052631579
+Ohio	Tennessee	2.2125
+Dawson's Creek	Georgia (U.S. state)	2.21428571429
+Bangladesh	Tripura	2.21875
+Knoxville, Tennessee	Montgomery, Alabama	2.21951219512
+Calgary	Helena, Montana	2.22727272727
+Madison, Wisconsin	Minnesota	2.23255813953
+Broadway (Manhattan)	Sarah Lawrence College	2.234375
+Georgia (U.S. state)	Greensboro, North Carolina	2.2375
+Bathhouse Row	Missouri	2.25
+Kansas City, Missouri	Sioux Falls, South Dakota	2.25
+Cleveland	Oberlin College	2.25
+Chicago	Indianapolis	2.25555555556
+Brown University	Massachusetts	2.25641025641
+Lake Michigan	Missouri River	2.25806451613
+Dayton, Ohio	Fort Wayne, Indiana	2.26470588235
+Compton, California	Forest Lawn Memorial Park, Glendale	2.26470588235
+Lexington, Kentucky	Rock and Roll Hall of Fame	2.26923076923
+Forest Lawn Memorial Park, Glendale	University of Southern California	2.27272727273
+Cedar Point	Oberlin College	2.27777777778
+Chicago	Wisconsin	2.27777777778
+Palo Alto, California	San Quentin State Prison	2.27906976744
+Georgia (U.S. state)	Orlando, Florida	2.29069767442
+Inland Empire	Naval Base San Diego	2.29166666667
+Flathead Lake	Grand Canyon	2.29411764706
+Dallas/Fort Worth International Airport	Rio Grande	2.29487179487
+Georgia (U.S. state)	Mississippi River	2.29545454545
+Nebraska	Wichita, Kansas	2.3
+CN Tower	New York	2.30303030303
+Chicago	Milwaukee	2.30681818182
+Purdue University	University of Chicago	2.30952380952
+Ohio	Purdue University	2.31428571429
+Biltmore Estate	South Carolina	2.31818181818
+Durham, North Carolina	Virginia	2.32051282051
+Quad Cities	University of Chicago	2.32142857143
+Des Moines, Iowa	Minnesota	2.32558139535
+Beverly Hills, California	Compton, California	2.32894736842
+Leicester	Southampton	2.33333333333
+Indianapolis Motor Speedway	University of Notre Dame	2.3375
+Cornell University	United States Military Academy	2.33928571429
+Lake Michigan	Minnesota	2.34444444444
+7 World Trade Center	Jersey City, New Jersey	2.34615384615
+Appalachian Mountains	Biltmore Estate	2.35
+Bill Gates's house	Seattle–Tacoma International Airport	2.35294117647
+Goa	Kerala	2.35714285714
+Fort Sumter	Virginia Tech	2.36363636364
+National Stock Exchange of India	Western Ghats	2.36956521739
+Pennsylvania	Virginia	2.37179487179
+Boise, Idaho	Helena, Montana	2.37179487179
+Providence, Rhode Island	Salem, Massachusetts	2.38095238095
+Cloud Gate	Lake Michigan	2.38461538462
+Charleston, South Carolina	Durham, North Carolina	2.39024390244
+Lake Tahoe	Mount Whitney	2.39473684211
+Australia (continent)	Papua New Guinea	2.41176470588
+Adam's Bridge	Tiruchirappalli	2.42105263158
+Boston University	Martha's Vineyard	2.42424242424
+Oberlin College	University of Notre Dame	2.42592592593
+Library of Congress	Maryland	2.42682926829
+Illinois	Missouri River	2.43902439024
+Library of Congress	United States Naval Academy	2.44047619048
+Lake Erie	Rock and Roll Hall of Fame	2.44186046512
+Atlantic City, New Jersey	Princeton University	2.44444444444
+Charlottesville, Virginia	Knoxville, Tennessee	2.4512195122
+Monument Valley	Rio Grande	2.45238095238
+Chattanooga, Tennessee	South Carolina	2.453125
+Bihar	Tamil Nadu	2.45454545455
+Marseille	Monte Carlo	2.45454545455
+Harvard University	Sarah Lawrence College	2.45454545455
+Pune	Tiruchirappalli	2.46153846154
+Forest Lawn Memorial Park, Glendale	Los Angeles International Airport	2.46666666667
+Alcatraz Island	Levi's Stadium	2.46875
+AT&T Stadium	Waco, Texas	2.46875
+Arlington National Cemetery	Robert F. Kennedy Memorial Stadium	2.47058823529
+American University	Ronald Reagan Washington National Airport	2.47727272727
+O'Hare International Airport	Quad Cities	2.47916666667
+Galveston, Texas	Oklahoma City	2.48387096774
+Odisha	Puducherry	2.5
+Mysore	Rameswaram	2.5
+Crater Lake	Oso, Washington	2.5
+Compton, California	University of California, Irvine	2.5
+Juilliard School	Queens	2.5
+Appalachian Mountains	Lexington, Kentucky	2.5
+Iowa	Minnesota	2.5119047619
+Elgin, Illinois	Willis Tower	2.52380952381
+Kentucky	Virginia	2.52941176471
+Arkansas	Memphis, Tennessee	2.53333333333
+Hollywood Walk of Fame	San Diego	2.53448275862
+Chrysler Building	Juilliard School	2.53571428571
+LaGuardia Airport	Rikers Island	2.53846153846
+Indore	National Stock Exchange of India	2.54166666667
+Kerala	Tirumala Venkateswara Temple	2.54166666667
+Fordham University	Harvard University	2.54761904762
+Havana	West Palm Beach, Florida	2.55714285714
+Michigan	Wisconsin	2.55813953488
+Richmond, Virginia	Ronald Reagan Washington National Airport	2.5625
+Minnesota	Nebraska	2.5652173913
+Illinois	Missouri	2.56578947368
+Georgia (U.S. state)	Kentucky	2.57142857143
+Channel Islands	English Channel	2.57142857143
+Massachusetts	Providence, Rhode Island	2.59090909091
+Michigan	Quad Cities	2.59523809524
+Antilia (building)	Chhatrapati Shivaji International Airport	2.6
+Ellis Island	Flatiron Building	2.6
+Kochi	Tiruchirappalli	2.6
+Neverland Ranch	San Jose, California	2.6
+Mangalore	Rameswaram	2.6
+Fordham University	Yonkers, New York	2.60344827586
+Charleston, South Carolina	Charlotte, North Carolina	2.60465116279
+Appalachia	South Carolina	2.60526315789
+AT&T Stadium	Houston	2.60606060606
+Colombo	South India	2.60869565217
+South Carolina	Virginia	2.61363636364
+Kentucky	St. Louis	2.61538461538
+Boston University	Brown University	2.61904761905
+Elgin, Illinois	Lake Michigan	2.62121212121
+Lake Erie	Love Canal	2.63043478261
+Arkansas	Louisiana	2.63414634146
+Salton Sea	Southern California	2.64
+Alcatraz Island	Palo Alto, California	2.64102564103
+San Francisco Bay Area	San Quentin State Prison	2.64285714286
+Erie Canal	Niagara Falls	2.64473684211
+Bill Gates's house	Oso, Washington	2.65625
+Kodaikanal	Meenakshi Amman Temple	2.65909090909
+North Carolina	Virginia	2.66176470588
+Cambridge, Massachusetts	Providence, Rhode Island	2.66666666667
+Kentucky	West Virginia	2.67307692308
+Ahmedabad	Madhya Pradesh	2.67391304348
+Michigan	Ohio	2.67441860465
+Deccan Plateau	Indore	2.675
+Fifth Avenue	Yonkers, New York	2.67948717949
+Chennai	Indore	2.68181818182
+Oklahoma City	Wichita, Kansas	2.68292682927
+Ahmedabad	National Stock Exchange of India	2.6875
+Mangalore	Pondicherry	2.69230769231
+Fifth Avenue	Hart Island, New York	2.6935483871
+Fort Collins, Colorado	Great Plains	2.69444444444
+Bel Air, Los Angeles	Compton, California	2.7
+Kochi	Western Ghats	2.70588235294
+Arlington County, Virginia	Smithsonian Institution	2.70833333333
+Forest Lawn Memorial Park, Glendale	Venice, Los Angeles	2.71875
+Miami International Airport	Walt Disney World	2.72619047619
+Bell Labs	Princeton University	2.72727272727
+Kochi	Tirumala Venkateswara Temple	2.72727272727
+Massachusetts	Yale University	2.72727272727
+Appalachian Mountains	Georgia (U.S. state)	2.73170731707
+Burbank, California	Forest Lawn Memorial Park, Glendale	2.73333333333
+Hollywood	San Francisco–Oakland Bay Bridge	2.74193548387
+Massachusetts	Rhode Island	2.74418604651
+Hollywood Walk of Fame	Pasadena, California	2.75581395349
+Mount St. Helens	Puget Sound	2.75675675676
+Martha's Vineyard	Worcester, Massachusetts	2.75675675676
+Connecticut	Rhode Island	2.76666666667
+Olympic National Park	Seattle–Tacoma International Airport	2.77027027027
+Columbia River	Oakville, Washington	2.77777777778
+Arkansas	Bathhouse Row	2.77777777778
+Indiana	Tennessee	2.78571428571
+American University	Library of Congress	2.7875
+Fifth Avenue	Fordham University	2.79032258065
+Indianapolis	Purdue University	2.79166666667
+Allahabad	Humayun's Tomb	2.79411764706
+Arlington County, Virginia	Robert F. Kennedy Memorial Stadium	2.8
+Illinois	Indiana	2.80434782609
+Lombard Street (San Francisco)	Palo Alto, California	2.80952380952
+Robert F. Kennedy Memorial Stadium	Virginia	2.80952380952
+Elgin, Illinois	University of Chicago	2.81081081081
+Bellevue, Washington	Vancouver	2.81818181818
+Flathead Lake	Wyoming	2.83333333333
+Knoxville, Tennessee	Lexington, Kentucky	2.83720930233
+Adam's Bridge	South India	2.84782608696
+Love Canal	Niagara Falls	2.84782608696
+Brihadeeswarar Temple	Kerala	2.85
+Hart Island, New York	Rikers Island	2.85185185185
+Kochi	Tamil Nadu	2.85714285714
+Arlington County, Virginia	United States Capitol	2.87096774194
+Santa Catalina Island, California	University of Southern California	2.87179487179
+New York	Pennsylvania	2.87804878049
+Chesapeake Bay	College of William & Mary	2.88
+Appalachian Mountains	Stone Mountain	2.88571428571
+Compton, California	University of California, Los Angeles	2.8875
+AT&T Stadium	Galveston, Texas	2.88888888889
+Elgin, Illinois	Wrigley Field	2.890625
+Broadway (Manhattan)	Hart Island, New York	2.890625
+Arkansas	Tennessee	2.89534883721
+Himalayas	Humayun's Tomb	2.9
+Chennai	Kochi	2.9
+Harvard University	Salem, Massachusetts	2.90243902439
+Georgia (U.S. state)	Tennessee	2.90243902439
+Puducherry	Thiruvananthapuram	2.90322580645
+Hart Island, New York	Northeastern United States	2.90540540541
+Montana	Wyoming	2.90909090909
+Elgin, Illinois	Great Lakes	2.91176470588
+Indore	Rajasthan	2.91666666667
+Hollywood Sign	Staples Center	2.92105263158
+Georgetown University	Washington Monument	2.92307692308
+Columbia University	Fifth Avenue	2.92857142857
+AT&T Stadium	Fort Worth, Texas	2.94
+American University	United States Capitol	2.94594594595
+Alcatraz Island	Oakland, California	2.95
+Chennai	Kerala	2.95
+Kochi	Sri Lanka	2.95454545455
+Georgia Institute of Technology	Hartsfield–Jackson Atlanta International Airport	2.95454545455
+Arlington County, Virginia	Washington Monument	2.96052631579
+Kennedy Space Center	Walt Disney World	2.96153846154
+Discovery Island (Bay Lake)	Miami Beach, Florida	2.96428571429
+Georgia (U.S. state)	North Carolina	2.96551724138
+Hollywood Sign	Long Beach, California	2.96590909091
+Idaho	Montana	2.96666666667
+Buckinghamshire	Windsor Castle	2.96666666667
+Anaheim, California	Compton, California	2.975
+Anaheim, California	San Fernando Valley	2.98148148148
+CN Tower	Hamilton, Ontario	3.0
+Montmartre Cemetery	University of Paris	3.0
+Riverside, California	The Forum (Inglewood)	3.0
+Mysore	Surat	3.0
+Willis Tower	Wrigley Field	3.0
+Jagannath Temple, Puri	Tamil Nadu	3.0
+Allahabad	National Stock Exchange of India	3.0
+Beverly Hills, California	The Forum (Inglewood)	3.0
+Humayun's Tomb	Lotus Temple	3.0
+Discovery Island (Bay Lake)	Naples, Florida	3.0
+Alcatraz Island	San Francisco International Airport	3.01162790698
+Pasadena, California	Venice, Los Angeles	3.0125
+Arlington County, Virginia	United States Naval Academy	3.0125
+Kennedy Space Center	Magic Kingdom	3.01388888889
+The New School	Wall Street	3.02
+Pennsylvania	West Virginia	3.02380952381
+Kansas	Missouri	3.03260869565
+Harvard College	Salem, Massachusetts	3.03846153846
+Colorado	Utah	3.05
+Robert F. Kennedy Memorial Stadium	Ronald Reagan Washington National Airport	3.05
+Anaheim, California	Santa Catalina Island, California	3.05405405405
+Burbank, California	The Forum (Inglewood)	3.05555555556
+Hart Island, New York	Yonkers, New York	3.05882352941
+South India	Western Ghats	3.0652173913
+Annapurna	Bhopal	3.06666666667
+Burbank, California	Compton, California	3.07142857143
+Arkansas	Mississippi	3.07317073171
+Camden, New Jersey	Philadelphia	3.08064516129
+Oakland, California	San Quentin State Prison	3.08974358974
+Bihar	Maharashtra	3.09090909091
+Canberra	Sydney	3.09523809524
+Grand Canyon	Nevada	3.09677419355
+Princeton University	University of Pennsylvania	3.09756097561
+Bel Air, Los Angeles	The Forum (Inglewood)	3.1
+Columbia University	Juilliard School	3.10294117647
+Galveston, Texas	George Bush Intercontinental Airport	3.10714285714
+Karnataka	Kerala	3.11904761905
+Ajanta Caves	Western Ghats	3.12
+Mount St. Helens	Oso, Washington	3.12121212121
+Brooklyn Bridge	Wall Street	3.12162162162
+Bangladesh	Sundarbans	3.125
+Hudson River	SoHo, Manhattan	3.12903225806
+Palo Alto, California	Stockton, California	3.13095238095
+Kennedy Space Center	St. Petersburg, Florida	3.13235294118
+Discovery Island (Bay Lake)	Walt Disney World	3.13793103448
+Biltmore Estate	Charlotte, North Carolina	3.15
+House of Lords	King's College London	3.15
+Ahmedabad	Indore	3.15517241379
+Appalachian Mountains	Asheville, North Carolina	3.15625
+Mount Rainier	Seattle–Tacoma International Airport	3.15625
+Palo Alto, California	San Andreas Fault	3.16
+Kentucky	Tennessee	3.16666666667
+7, Race Course Road	New Delhi	3.16666666667
+Lotus Temple	Qutb Minar	3.16666666667
+Mangalore	Padmanabhaswamy Temple	3.16666666667
+Hamilton, Ontario	University of Toronto	3.16666666667
+Indian subcontinent	Tiruchirappalli	3.17741935484
+Arlington, Washington	Oakville, Washington	3.17857142857
+Compton, California	Riverside, California	3.18292682927
+Rice University	Texas A&M University	3.18571428571
+Ellis Island	Midtown Manhattan	3.1875
+Brihadeeswarar Temple	Tiruchirappalli	3.19047619048
+Georgia (U.S. state)	South Carolina	3.20731707317
+SoHo, Manhattan	Williamsburg, Brooklyn	3.20833333333
+Los Angeles International Airport	University of Southern California	3.20930232558
+Beverly Hills, California	Forest Lawn Memorial Park, Glendale	3.20967741935
+Long Beach, California	San Fernando Valley	3.21875
+Adam's Bridge	Rameswaram	3.21875
+Ajanta Caves	Gateway of India	3.22
+Stanford University	University of California, Davis	3.22093023256
+Los Angeles International Airport	Venice, Los Angeles	3.225
+Rameswaram	Sri Lanka	3.22580645161
+Indiana	Lake Michigan	3.22972972973
+New York metropolitan area	Rikers Island	3.23333333333
+Arlington National Cemetery	Smithsonian Institution	3.23529411765
+Duke University	University of North Carolina at Chapel Hill	3.23684210526
+Detroit	Lake Erie	3.23684210526
+Lexington, Kentucky	Ohio River	3.24390243902
+Manhattan	The New School	3.25
+Bel Air, Los Angeles	University of Southern California	3.25
+Atlanta	Stone Mountain	3.25
+Columbia University	Pennsylvania Station (New York City)	3.25
+Oregon	Washington (state)	3.25641025641
+Burbank, California	Staples Center	3.25714285714
+Madhya Pradesh	Maharashtra	3.25925925926
+Beverly Hills, California	University of Southern California	3.26829268293
+Long Beach, California	Santa Catalina Island, California	3.27027027027
+Coimbatore	Western Ghats	3.27272727273
+Arlington County, Virginia	Library of Congress	3.275
+Columbia River	Oregon	3.27631578947
+Alcatraz Island	Lombard Street (San Francisco)	3.28125
+Cascade Range	Darrington, Washington	3.28125
+Arlington County, Virginia	Washington, D.C.	3.28205128205
+Austin, Texas	Rio Grande	3.2875
+Lake Michigan	Willis Tower	3.29166666667
+Kerala	Puducherry	3.29310344828
+Ghoramara Island	Sundarbans	3.3
+Oberlin College	Ohio	3.30434782609
+Brooklyn Bridge	Fifth Avenue	3.30487804878
+Chicago metropolitan area	Cloud Gate	3.30555555556
+Brahmaputra River	Nagpur	3.3125
+Alcatraz Island	San Quentin State Prison	3.3125
+College of William & Mary	Virginia Tech	3.31578947368
+Kochi	South India	3.32692307692
+Ahmedabad	Bhopal	3.33333333333
+Cleveland	Lake Erie	3.33333333333
+Bellevue, Washington	Bill Gates's house	3.33333333333
+Appalachian Mountains	Charlottesville, Virginia	3.34146341463
+Ciudad Juárez	Tijuana	3.35185185185
+Chennai	Thiruvananthapuram	3.35714285714
+Dayton, Ohio	Lake Erie	3.36046511628
+Bellevue, Washington	Mount Rainier	3.37096774194
+Brooklyn Bridge	SoHo, Manhattan	3.37142857143
+Kochi	Thiruvananthapuram	3.375
+CN Tower	University of Toronto	3.375
+Sacramento, California	San Jose, California	3.38888888889
+Chicago	Elgin, Illinois	3.39189189189
+Burbank, California	University of California, Los Angeles	3.39189189189
+Jacksonville, Florida	Miami	3.4
+Arlington County, Virginia	Vietnam Veterans Memorial	3.40625
+Cornell University	Yale University	3.40909090909
+California	Half Dome	3.41666666667
+Oakland, California	Palo Alto, California	3.42222222222
+Pondicherry	Tiruchirappalli	3.43181818182
+Arlington County, Virginia	Charlottesville, Virginia	3.43421052632
+Discovery Island (Bay Lake)	Florida	3.4347826087
+Naples, Florida	Tallahassee, Florida	3.44318181818
+Colombo	Sri Lanka	3.44827586207
+Kerala	Tamil Nadu	3.45161290323
+Mysore	Sanchi	3.45454545455
+Mount Rainier	Mount St. Helens	3.46341463415
+Corpus Christi, Texas	Fort Worth, Texas	3.46428571429
+Bel Air, Los Angeles	University of California, Los Angeles	3.46666666667
+Kochi	Munnar	3.47368421053
+Galveston, Texas	Waco, Texas	3.475
+Puducherry	Tiruchirappalli	3.47619047619
+Ann Arbor, Michigan	Flint, Michigan	3.47619047619
+Karnataka	Tamil Nadu	3.48148148148
+CN Tower	Toronto Pearson International Airport	3.5
+Cambridge, Massachusetts	Salem, Massachusetts	3.5
+United States Naval Academy	Vietnam Veterans Memorial	3.5
+Puducherry	Rameswaram	3.52
+Charlottesville, Virginia	Richmond, Virginia	3.52
+Lake Erie	Ohio	3.52272727273
+Five Points, Manhattan	SoHo, Manhattan	3.53125
+Hyde Park, London	Wembley Stadium	3.53333333333
+Fort Worth, Texas	Galveston, Texas	3.53571428571
+Mauna Kea	Oahu	3.54166666667
+Miami Beach, Florida	Sarasota, Florida	3.54285714286
+Grand Rapids, Michigan	Michigan State University	3.55714285714
+University of Chicago	University of Illinois at Urbana–Champaign	3.5625
+Gainesville, Florida	Naples, Florida	3.56578947368
+Greenwich Village	SoHo, Manhattan	3.56756756757
+Darrington, Washington	Oakville, Washington	3.57352941176
+Cascade Range	Mount Rainier	3.575
+Jacksonville, Florida	West Palm Beach, Florida	3.58333333333
+Beverly Hills, California	Burbank, California	3.58536585366
+Compton, California	The Forum (Inglewood)	3.58620689655
+Bryce Canyon National Park	Zion National Park	3.58620689655
+Liberty University	Virginia	3.59090909091
+Munnar	Western Ghats	3.59090909091
+Boca Raton, Florida	Miami Beach, Florida	3.59523809524
+AT&T Stadium	Dallas	3.6
+Southern California	The Forum (Inglewood)	3.60606060606
+Ohio	Rock and Roll Hall of Fame	3.60810810811
+SoHo, Manhattan	Wall Street	3.61428571429
+Buffalo, New York	Ithaca, New York	3.61764705882
+Appalachian Mountains	Kentucky	3.61904761905
+University of California, Irvine	University of California, San Diego	3.62195121951
+Seattle–Tacoma International Airport	Space Needle	3.625
+Mount Rainier	Puget Sound	3.62857142857
+Atlantic City, New Jersey	Camden, New Jersey	3.64285714286
+Fifth Avenue	Pennsylvania Station (New York City)	3.64285714286
+Anaheim, California	Santa Monica, California	3.65
+Kansas City, Missouri	Missouri River	3.65217391304
+Ann Arbor, Michigan	Detroit	3.65277777778
+North Carolina	South Carolina	3.65909090909
+Puducherry	Tamil Nadu	3.66666666667
+Long Beach, California	Santa Monica, California	3.67073170732
+Brown University	Harvard University	3.67441860465
+Buffalo, New York	Syracuse, New York	3.67857142857
+Mysore	South India	3.68181818182
+Humayun's Tomb	Qutb Minar	3.6875
+House of Lords	Trafalgar Square	3.69230769231
+Austin, Texas	Houston	3.7
+Cleveland	Rock and Roll Hall of Fame	3.71428571429
+Karnataka	South India	3.71428571429
+Mangalore	South India	3.71666666667
+7, Race Course Road	Delhi	3.71739130435
+Colorado River	Grand Canyon Skywalk	3.73611111111
+Riverside, California	Southern California	3.7375
+Ajanta Caves	India	3.73913043478
+Toronto Pearson International Airport	University of Toronto	3.74285714286
+Houston	Rice University	3.75
+Kerala	Thiruvananthapuram	3.75862068966
+Virginia	West Virginia	3.76136363636
+University of California, Irvine	University of Southern California	3.7619047619
+Chattanooga, Tennessee	Knoxville, Tennessee	3.7625
+Mangalore	Western Ghats	3.76315789474
+Orlando, Florida	West Palm Beach, Florida	3.76829268293
+Appalachian Mountains	Virginia	3.77586206897
+Alcatraz Island	San Francisco–Oakland Bay Bridge	3.77941176471
+Indiana	Purdue University	3.78378378378
+Miami Beach, Florida	West Palm Beach, Florida	3.78846153846
+Kodaikanal	Munnar	3.80769230769
+Harvard College	Harvard University	3.81034482759
+Palm Springs, California	Southern California	3.81081081081
+Chhatrapati Shivaji International Airport	Gateway of India	3.81818181818
+Key West	Miami Beach, Florida	3.83333333333
+Sundarbans	West Bengal	3.83333333333
+Ellis Island	Hudson River	3.83823529412
+Great Plains	Nebraska	3.86585365854
+Boca Raton, Florida	Key West	3.86666666667
+Alcatraz Island	San Francisco Bay Area	3.86842105263
+Library of Congress	Smithsonian Institution	3.87209302326
+Jacksonville, Florida	Naples, Florida	3.88235294118
+Compton, California	Southern California	3.88461538462
+Ellis Island	Manhattan	3.89024390244
+Tamil Nadu	Tiruchirappalli	3.89285714286
+Jacksonville, Florida	Orlando, Florida	3.9
+Padmanabhaswamy Temple	Thiruvananthapuram	3.90476190476
+Chesapeake Bay	Jamestown, Virginia	3.91176470588
+Boston University	Harvard University	3.91666666667
+Indian subcontinent	National Stock Exchange of India	3.91891891892
+Flagstaff, Arizona	Phoenix, Arizona	3.9358974359
+Denver	Fort Collins, Colorado	3.9358974359
+Stanford University	University of California, Berkeley	3.9375
+Arlington National Cemetery	Vietnam Veterans Memorial	3.93902439024
+Des Moines, Iowa	Great Plains	3.94871794872
+Nashville, Tennessee	Southern United States	3.95555555556
+Rameswaram	South India	3.95833333333
+George Bush Intercontinental Airport	Houston	3.96774193548
+Charlotte, North Carolina	Durham, North Carolina	3.97727272727
+North America	North Dakota	4.0
+Big Ben	London Eye	4.0
+Brooklyn Bridge	Williamsburg, Brooklyn	4.0
+Palo Alto, California	San Francisco Bay Area	4.01219512195
+Chesapeake Bay	Virginia	4.01515151515
+Coimbatore	Ooty	4.09523809524
+New York	Northeastern United States	4.09523809524
+Chicago	North America	4.11363636364
+Phoenix, Arizona	Scottsdale, Arizona	4.12
+Cambridge, Massachusetts	Worcester, Massachusetts	4.125
+Michigan Stadium	University of Michigan	4.12903225806
+Bel Air, Los Angeles	Beverly Hills, California	4.13953488372
+New Delhi	Rashtrapati Bhavan	4.15384615385
+Jama Masjid, Delhi	New Delhi	4.15789473684
+Charlottesville, Virginia	Virginia	4.20238095238
+Martha's Vineyard	Massachusetts	4.21052631579
+North Carolina	University of North Carolina at Chapel Hill	4.23611111111
+Chicago	Willis Tower	4.23913043478
+Chhatrapati Shivaji International Airport	Maharashtra	4.25
+Los Angeles International Airport	Southern California	4.25
+Albany, New York	New York	4.26086956522
+Delhi	New Delhi	4.26086956522
+Epcot	Florida	4.27027027027
+South India	Tiruchirappalli	4.28571428571
+Manhattan	SoHo, Manhattan	4.28571428571
+Jersey City, New Jersey	Newark, New Jersey	4.28571428571
+Colorado	Rocky Mountains	4.29411764706
+Tacoma, Washington	Washington (state)	4.3023255814
+Chicago metropolitan area	O'Hare International Airport	4.32258064516
+Manhattan	Queens	4.325
+Bangladesh	Dhaka	4.33333333333
+Massachusetts	Worcester, Massachusetts	4.33823529412
+India	Vadodara	4.34090909091
+Southern California	University of Southern California	4.35294117647
+Harvard University	Massachusetts	4.3625
+Colorado	Fort Collins, Colorado	4.36538461538
+Chennai	Tamil Nadu	4.38888888889
+Mangalore	Mysore	4.39583333333
+Graceland	Memphis, Tennessee	4.40322580645
+Aspen, Colorado	Colorado	4.43333333333
+San Francisco Bay Area	San Francisco–Oakland Bay Bridge	4.45833333333
+Massachusetts	Northeastern United States	4.46774193548
+Florida	Walt Disney World	4.47435897436
+Chicago metropolitan area	University of Chicago	4.48076923077
+Indiana	Indianapolis	4.48611111111
+Indianapolis	Indianapolis Motor Speedway	4.48863636364
+South India	Tamil Nadu	4.5
+Kodaikanal	Tamil Nadu	4.5
+Grand Rapids, Michigan	Michigan	4.53488372093
+Pondicherry	Puducherry	4.54545454545
+Minneapolis	Minneapolis–Saint Paul	4.55882352941
+Grand Canyon	Grand Canyon Skywalk	4.56060606061
+Colorado	Denver	4.56097560976
+Jackson, Mississippi	Mississippi	4.56818181818
+Columbus, Ohio	Ohio	4.56976744186
+Lake Michigan	Michigan	4.58888888889
+Boston University	Massachusetts	4.59210526316
+Columbia, South Carolina	South Carolina	4.625
+Massachusetts	Salem, Massachusetts	4.63793103448
+University of Virginia	Virginia	4.64473684211
+Miami	University of Miami	4.66216216216
+Des Moines, Iowa	Iowa	4.66666666667
+India	Taj Mahal	4.7
+Harrisburg, Pennsylvania	Pennsylvania	4.73255813953
+Madison, Wisconsin	University of Wisconsin–Madison	4.765625
+Florida	Orlando, Florida	4.77777777778
+Boston	Northeastern United States	4.8

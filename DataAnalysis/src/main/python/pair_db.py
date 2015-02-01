@@ -26,12 +26,26 @@ FLOAT_FIELDS = [
     'spherical',
     'geodetic',
     'countries',
+    'ordinal',
     'states',
     'graph25',
     'graph100',
     'sr',
     'typeSr',
     'popDiff',
+]
+
+CONTAINMENT_CLASSES = [
+    "cc-unknown",
+    "cc-country-country-false",
+    "cc-country-state-false",
+    "cc-country-state-true",
+    "cc-country-point-false",
+    "cc-country-point-true",
+    "cc-state-state-false",
+    "cc-state-point-false",
+    "cc-state-point-true",
+    "cc-point-point-false",
 ]
 
 
@@ -44,7 +58,11 @@ VALIDATION_PAIRS = [
 
 PAIRS_TO_SKIP = [
         (l1, l2) for (high_low, l1, l2) in VALIDATION_PAIRS
-] + [('Harvard University', 'Princeton University')]
+] + [
+    ('Harvard University', 'Princeton University'),
+    ("Dawson's Creek", "Georgia Guidestones"),
+    ("Dawson's Creek", "Georgia (U.S. state)"),
+]
 
 class PairDb:
     def __init__(self):
@@ -116,11 +134,11 @@ class PairDb:
             if r.location1:
                 assert(r.location1.familiarity == r.familiarity1)
                 assert(r.location1.valence == r.valence1)
-                assert(r.location1.popRank == r.popRank1)
+                assert(abs(math.log(1 + r.location1.popRank) - r.popRank1) < 0.01)
             if r.location2:
                 assert(r.location2.familiarity == r.familiarity2)
                 assert(r.location2.valence == r.valence2)
-                assert(r.location2.popRank == r.popRank2)
+                assert(abs(math.log(1 + r.location2.popRank) - r.popRank2) < 0.01)
 
         warn('%d of %d locations had a location response assigned to them (%d location responses orphaned)'
              % (i, len(self.responses)*2, len(remaining)))
@@ -184,16 +202,9 @@ class Pair:
                 val = None
             if field.startswith('valence') and val <= 0:
                 val = None
+            if field in CONTAINMENT_CLASSES:
+                val = int(val)
             setattr(self, field, val)
-        self.lcs = longest_common_substring(self.location1Name.lower(), self.location2Name.lower())
-        self.popDiff = abs(math.log(self.popRank1 + 1) - math.log(self.popRank2 + 1))
-
-        # Fix up ordinal
-        #if self.ordinal is None and self.spherical is not None:
-            # self.ordinal = 3000.0 + self.spherical / (3.14 * 2 * 6372800) * 1000000
-
-        if self.geodetic is None and self.spherical is not None:
-            self.geodetic = self.spherical
 
     def get_location_key(self):
         assert(self.location1Name < self.location2Name)

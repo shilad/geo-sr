@@ -3,6 +3,9 @@ package org.wikibrain.geosr;
 import com.vividsolutions.jts.geom.Geometry;
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
+import org.supercsv.io.CsvMapReader;
+import org.supercsv.io.ICsvMapReader;
+import org.supercsv.prefs.CsvPreference;
 import org.wikibrain.conf.ConfigurationException;
 import org.wikibrain.core.dao.DaoException;
 import org.wikibrain.core.lang.Language;
@@ -11,6 +14,8 @@ import org.wikibrain.wikidata.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
@@ -31,12 +36,35 @@ public class PageInfoDb {
         this.wikidataDao = wikidataDao;
         readPopularity();
         readScales();
+        try {
+            addCategories();
+        } catch (IOException e) {
+            throw new DaoException(e);
+        }
+    }
 
-        InstanceOfAnalyzer analyzer = new InstanceOfAnalyzer(wikidataDao);
+    public void addCategories() throws DaoException, IOException {
+        File file = new File("dat/OSM_mappings.csv");
+        ICsvMapReader mapReader = new CsvMapReader(new FileReader(file), CsvPreference.STANDARD_PREFERENCE);
+
+        // the header columns are used as the keys to the Map
+        final String[] header = mapReader.getHeader(true);
+
+        while (true) {
+            Map<String, String> fields = mapReader.read(header);
+            if (fields == null) {
+                break;
+            }
+            int id = Integer.parseInt(fields.get("wikidata-id"));
+            String tag = fields.get("OSM-tag");
+            this.byId.get(id).instanceOf = tag;
+        }
+
+        /*InstanceOfAnalyzer analyzer = new InstanceOfAnalyzer(wikidataDao);
         analyzer.analyze(byId.values());
         for (PageInfo pi : byId.values()) {
             pi.instanceOf = analyzer.getBest(pi);
-        }
+        }*/
     }
 
     private void readPopularity() throws FileNotFoundException, DaoException {
@@ -57,7 +85,7 @@ public class PageInfoDb {
                 LOG.info("missing geometry for " + pi.title + " (id " + pi.id + ")");
             } else {
                 pi.point = g.getCentroid();
-                getInstanceOf(pi);
+//                getInstanceOf(pi);
 //                System.err.format("%s is %s\n", pi.getTitle(), pi.instanceOf);
 
             }

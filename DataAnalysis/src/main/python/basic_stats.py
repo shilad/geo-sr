@@ -12,25 +12,16 @@ import location_db
 import pair_db
 
 
-METRICS = [
-    'lcs',
-    'relatedness',
-    'spherical',
-    'geodetic',
-    'countries',
-    'states',
-    'graph25',
-    'graph100',
-    'sr',
-    'typeSr',
-    ]
-
-
-
 def analyze():
     tee(RES + '/basic.txt', 'w')
 
     db = pair_db.PairDb()
+    concepts = set()
+    for r in db.aggregated(min_count=5):
+        concepts.add(r.location1Name)
+        concepts.add(r.location2Name)
+
+    print len(concepts)
     analyze_validation(db)
     analyze_response_values(db)
     analyze_aggregation(db)

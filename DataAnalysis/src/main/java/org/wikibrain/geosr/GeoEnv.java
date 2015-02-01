@@ -6,13 +6,16 @@ import org.wikibrain.conf.ConfigurationException;
 import org.wikibrain.core.cmd.Env;
 import org.wikibrain.core.cmd.EnvBuilder;
 import org.wikibrain.core.dao.DaoException;
+import org.wikibrain.core.dao.LocalPageDao;
+import org.wikibrain.core.dao.UniversalPageDao;
+import org.wikibrain.core.lang.Language;
+import org.wikibrain.core.model.NameSpace;
 import org.wikibrain.spatial.constants.RefSys;
 import org.wikibrain.spatial.dao.SpatialDataDao;
 import org.wikibrain.spatial.util.WikiBrainSpatialUtils;
 import org.wikibrain.wikidata.WikidataDao;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +34,9 @@ public class GeoEnv {
     public PersonDb personDb;
     public PageInfoDb pageDb;
     public DistanceService distances;
-    public ScaleAwareContains scaleAwareContains;
+    public ContainmentClass containmentClass;
+    private LocalPageDao pageDao;
+    private UniversalPageDao univDao;
 
     public GeoEnv(String args[]) throws ConfigurationException, IOException, DaoException {
         this(EnvBuilder.envFromArgs(args));
@@ -50,7 +55,7 @@ public class GeoEnv {
         personDb = new PersonDb();
         pageDb = new PageInfoDb(dao, env.getConfigurator().get(WikidataDao.class));
         distances = new DistanceService(this);
-        scaleAwareContains = new ScaleAwareContains(dao);
+        containmentClass = new ContainmentClass(dao);
     }
 
     private void addMissingGeometries(List<MissingGeometry> missing) throws DaoException {
