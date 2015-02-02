@@ -203,7 +203,7 @@ public class GeospatialNeighborSR implements NeighborSR {
 //        STATE_POINT_FALSE(0),
 //        POINT_POINT_FALSE(-.2142),
 //        INTERCEPT(3.1617);
-        LCS(0.1165),
+        /*LCS(0.1165),
         STATES(-0.058),
         COUNTRIES(0),
         ORDINAL(-0.1279),
@@ -218,6 +218,22 @@ public class GeospatialNeighborSR implements NeighborSR {
         STATE_POINT_FALSE(0),
         POINT_POINT_FALSE(0),
         INTERCEPT(2.2223);
+        */
+        LCS(0),
+        COUNTRIES(0.3002),
+        STATES(-0.206),
+        ORDINAL(-0.1564),
+        SR(2.5285),
+        COUNTRY_COUNTRY_FALSE(-0.8315),
+        COUNTRY_STATE_TRUE(0),
+        COUNTRY_STATE_FALSE(-1.1938),
+        COUNTRY_POINT_TRUE(1.7921),
+        COUNTRY_POINT_FALSE(-0.34),
+        STATE_STATE_FALSE(0),
+        STATE_POINT_TRUE(0.8172),
+        STATE_POINT_FALSE(0),
+        POINT_POINT_FALSE(0),
+        INTERCEPT(2.4694);
 
         public final int index;
         public final double coefficient;

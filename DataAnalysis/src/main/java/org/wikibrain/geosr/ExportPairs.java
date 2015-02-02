@@ -80,7 +80,11 @@ public class ExportPairs {
                 row.add(popDiff);
                 for (String m : DistanceService.METRICS) {
                     double d = env.distances.getDistance(r.getPage1(), r.getPage2(), m);
-                    row.add(Math.log(1 + d));
+                    if (m.equals("ordinal")) {
+                        row.add(Math.log(500 + d));
+                    } else {
+                        row.add(Math.log(1 + d));
+                    }
                 }
                 row.add(getSimilarity(r.getPage1().getTitle(), r.getPage2().getTitle()));
                 row.add(getSimilarity(r.getPage1().instanceOf, r.getPage2().instanceOf));
