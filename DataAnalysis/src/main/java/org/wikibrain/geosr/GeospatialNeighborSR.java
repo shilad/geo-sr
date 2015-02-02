@@ -74,6 +74,21 @@ public class GeospatialNeighborSR implements NeighborSR {
         SphericalDistanceMetric spherical = new SphericalDistanceMetric(spatialDao);
         spherical.enableCache(true);
 
+        this.ordinalMetric = new OrdinalDistanceMetric(spatialDao, spherical);
+        ordinalMetric.setValidConcepts(univConcepts);
+        ordinalMetric.enableCache(true);
+
+        /*for (Geometry p : points.values()) {
+            int i = 0;
+            // ordinal
+            for (SpatialDistanceMetric.Neighbor n : ordinalMetric.getNeighbors(p, univConcepts.size())) {
+                System.out.println(i + ". distance =" + n.distance);
+                if (++i > 20) {
+                    break;
+                }
+            }
+        } */
+
         this.countryMetric = new BorderingDistanceMetric(spatialDao, "country");
         countryMetric.setMaxSteps(50);
         countryMetric.setValidConcepts(univConcepts);
@@ -83,10 +98,6 @@ public class GeospatialNeighborSR implements NeighborSR {
         stateMetric.setMaxSteps(50);
         stateMetric.setValidConcepts(univConcepts);
         stateMetric.enableCache(true);
-
-        this.ordinalMetric = new OrdinalDistanceMetric(spatialDao, spherical);
-        ordinalMetric.setValidConcepts(univConcepts);
-        ordinalMetric.enableCache(true);
 
         this.countryIndex = new ContainmentIndex();
         this.stateIndex = new ContainmentIndex();
@@ -292,7 +303,7 @@ public class GeospatialNeighborSR implements NeighborSR {
 
         // ordinal
         for (SpatialDistanceMetric.Neighbor n : ordinalMetric.getNeighbors(point, univConcepts.size())) {
-            result.get(n.conceptId)[Feature.ORDINAL.index] = Math.log(1 + n.distance);
+            result.get(n.conceptId)[Feature.ORDINAL.index] = Math.log(500 + n.distance);
         }
 
         // sr

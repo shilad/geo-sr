@@ -58,7 +58,6 @@ public class Simulator {
         this.loadPopularConcepts();
         SRMetric metric = env.getConfigurator().get(SRMetric.class, "ensemble", "language", "en");
         this.nlpSr = new NLPNeighborSR(env, metric, univToLocal);
-//        this.geoSr = new NLPNeighborSR(env, metric, univToLocal);
         this.geoSr = new GeospatialNeighborSR(env, nlpSr, univToLocal);
     }
 
@@ -208,7 +207,7 @@ public class Simulator {
                 "San Francisco",
                 "Inuvik",
                 "McCarthy, Alaska",
-                "Bowman, South Dakota",
+//                "Bowman, South Dakota",
                 "Duluth, Minnesota"
         );
         for (String t : titles) {
