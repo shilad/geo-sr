@@ -125,9 +125,11 @@ public class AgreementMap {
     private List<Integer> pickSample(Envelope bounds, int n) {
         List<Integer> sampleIds = new ArrayList<Integer>();
         for (int id : conceptViews.keys()) {
-            Point p = points.get(id).getCentroid();
-            if (bounds.contains(p.getCoordinate())) {
-                sampleIds.add(id);
+            if (points.containsKey(id)) {
+                Point p = points.get(id).getCentroid();
+                if (bounds.contains(p.getCoordinate())) {
+                    sampleIds.add(id);
+                }
             }
         }
         Collections.shuffle(sampleIds);
